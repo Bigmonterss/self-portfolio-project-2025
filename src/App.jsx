@@ -6,6 +6,7 @@ import { MobileMenu } from "./components/MobileMenu";
 import { Home } from "./components/sections/Home";
 import { About } from "./components/sections/About";
 import { Projects } from "./components/sections/Projects";
+import { AnimCursor }from "./components/AnimCursor";
 import "./index.css";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           isLoaded ? "opacity-100" : "opacity-0"
           } bg-black text-gray-100`}
       >
+        <AnimCursor/>
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
         <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
         <Home/>
