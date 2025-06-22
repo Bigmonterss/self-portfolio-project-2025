@@ -1,5 +1,5 @@
 import profileImage from '../../assets/images/me.png';
-
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 export const About = () => {
     const frontendSkills =["React", "TailwindCSS", "HTML5", "CSS3"]
@@ -12,12 +12,27 @@ export const About = () => {
                     <img className="w-50 h-50 rounded-full" src={profileImage} alt="Profile Image"/>
                 </div>
 
-                <h2 className="text-3xl font-bold mb-1.5 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent text-center">
+                <h2 className="text-3xl font-bold mb-2 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent text-center">
                     About Me
                 </h2>
 
-                <div className="flex justify-center mb-4">
-                    <h1>LinkedIn  |  Github</h1>
+                <div className="flex justify-center mb-4 gap-3">
+                    <a 
+                        href="https://www.linkedin.com/in/jayden-pham-6043812b5/" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="hover:-translate-y-0.5 transition-all hover:text-blue-500"
+                    >
+                        <FaLinkedin size={30} />
+                    </a>
+                    <a 
+                        href="https://github.com/Bigmonterss" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="hover:-translate-y-0.5 transition-all hover:text-blue-500"
+                    >
+                        <FaGithub size={30} />
+                    </a>
                 </div>
             
 
