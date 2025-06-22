@@ -1,7 +1,7 @@
 
 export const About = () => {
-    const frontendSkills =["React", "TailwindCSS", "JavaScript", "HTML5", "CSS3"]
-    const backendSkills = ["Java", "Python", "C", "Node.js", "Flask", "MySQL" ]
+    const frontendSkills =["React", "TailwindCSS", "HTML5", "CSS3"]
+    const backendSkills = ["Java", "JavaScript", "Python", "Node.js", "Flask", "MySQL" ]
 
     return (
         <section id="about" className="flex items-center justify-center py-20">
