@@ -1,4 +1,5 @@
-import profileImage from '../../assets/images/me.png';;
+import profileImage from '../../assets/images/me.png';
+
 
 export const About = () => {
     const frontendSkills =["React", "TailwindCSS", "HTML5", "CSS3"]
@@ -11,9 +12,13 @@ export const About = () => {
                     <img className="w-50 h-50 rounded-full" src={profileImage} alt="Profile Image"/>
                 </div>
 
-                <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent text-center">
+                <h2 className="text-3xl font-bold mb-1.5 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent text-center">
                     About Me
                 </h2>
+
+                <div className="flex justify-center mb-4">
+                    <h1>LinkedIn  |  Github</h1>
+                </div>
             
 
                 {/* Small intro about me section*/}
