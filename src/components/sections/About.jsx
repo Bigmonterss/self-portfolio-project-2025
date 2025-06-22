@@ -6,10 +6,13 @@ export const About = () => {
     const backendSkills = ["Java", "JavaScript", "Python", "Node.js", "Flask", "MySQL" ]
 
     return (
-        <section id="about" className="flex items-center justify-center py-20">
+        <section id="about" className="flex items-center justify-center py-50">
             <div className="max-w-3xl mx-auto px-4">
                 <div className='flex justify-center mb-4'>
-                    <img className="w-50 h-50 rounded-full" src={profileImage} alt="Profile Image"/>
+                    <img 
+                        /* Remove the hover scale if wanted */
+                        className="w-50 h-50 rounded-full transition-all hover:scale-220" 
+                        src={profileImage} alt="Profile Image"/>
                 </div>
 
                 <h2 className="text-3xl font-bold mb-2 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent text-center">
