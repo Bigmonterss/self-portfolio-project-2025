@@ -1,6 +1,8 @@
 import { useEffect } from "react"
 
 export const Navbar = ({menuOpen, setMenuOpen}) => {
+    const text = "<Bigmonters/>"
+
     useEffect(() => {
         document.body.style.overflow = menuOpen ? "hidden" : "";
     }, [menuOpen]);
@@ -11,7 +13,7 @@ export const Navbar = ({menuOpen, setMenuOpen}) => {
         <div className="max-w-5xl mx-auto px-4">
             <div class="flex justify-between items-center h-16">
                 <a href="#home" className="font-mono text-xl font-bold text-white"> 
-                    Bigmonters.
+                    {text}
                 </a>
 
                 <div 
