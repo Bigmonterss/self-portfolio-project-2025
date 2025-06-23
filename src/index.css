@@ -33,9 +33,11 @@ body {
     }
   }
 
+  /* Remove if wanted for loading bar
   .animate-loading-bar {
     animation: loading 0.8s ease infinite;
   }
+  */
 }
 
 .reveal {
