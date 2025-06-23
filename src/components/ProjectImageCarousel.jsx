@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { FaLongArrowAltLeft, FaLongArrowAltRight  } from "react-icons/fa";
 import podcastImage1 from '../assets/images/podcast/podcast-image1.jpg';
 import podcastImage2 from '../assets/images/podcast/podcast-image2.jpg';
 import podcastImage3 from '../assets/images/podcast/podcast-image3.jpg';
@@ -46,13 +46,13 @@ export const ImageCarousel = ({ images }) => {
                 onClick={handlePrev}
                 className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black/40 text-white px-2 py-1 rounded hover:bg-black/60 z-10"
             >
-                ◀
+                <FaLongArrowAltLeft />
             </button>
             <button
                 onClick={handleNext}
                 className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black/40 text-white px-2 py-1 rounded hover:bg-black/60 z-10"
             >
-                ▶
+                <FaLongArrowAltRight />
             </button>
         </div>
     );
