@@ -1,9 +1,7 @@
 import { RevealOnScroll } from "../RevealOnScroll";
-import { ImageCarousel, podcastImages, prototypeImages, concertImages } from '../ImageCarousel';
+import { ImageCarousel, podcastImages, prototypeImages, concertImages } from '../ProjectImageCarousel';
 
 export const Projects = () => {
-    
-
     return (
         <section id="projects" className="min-h-screen flex items-center justify-center py-20">
             <RevealOnScroll>
