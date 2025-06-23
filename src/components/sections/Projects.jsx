@@ -1,5 +1,5 @@
 import { RevealOnScroll } from "../RevealOnScroll";
-import { ImageCarousel, podcastImages, prototypeImages } from '../ImageCarousel';
+import { ImageCarousel, podcastImages, prototypeImages, concertImages } from '../ImageCarousel';
 
 export const Projects = () => {
     
@@ -15,7 +15,7 @@ export const Projects = () => {
                     <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.2)]">
                         <h3 className="text-xl font-bold mb-2">Podcast Library</h3>
                         <p className="text-gray-400 mb-4">
-                            A podcast library web app where you are able to add, remove and browse for podcasts. 
+                            A full-stack group project where we had to create a podcast library web app where you are able to add, remove and browse for podcasts. 
                             The web app features an user authentication system, as well as using a database to store all podcasts, ratings, playlists, and login credentials.
                         </p>
                         <div className="mb-4">
@@ -45,7 +45,7 @@ export const Projects = () => {
                     <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.2)]">
                         <h3 className="text-xl font-bold mb-2">Concert Booking Web Service</h3>
                         <p className="text-gray-400 mb-4">
-                            A RESTful web service for a concert venue, which allows users to browse concerts, check seat availability, and make secure reservations with token-based authentication and real-time sell-out alerts.
+                            Given a fully styled frontend, our backend work focused on implementing a RESTful web service for browsing concerts, checking seat availability, and making secure reservations with authentication and real-time sell-out alerts.
                         </p>
                         <div className="mb-4">
                             {["Java", "SQL", "XML", "Git"].map((tech, key) => (
@@ -56,7 +56,9 @@ export const Projects = () => {
                                 </span>
                             ))}
                         </div>
-
+                         <div className="relative">
+                            <ImageCarousel images={concertImages}/>
+                        </div>
                         <div className="flex justify-between items-center">
                             {/* for later */}
                             <a href="#" className="text-blue-400 hover:text-blue-300 transition-colours my-4">

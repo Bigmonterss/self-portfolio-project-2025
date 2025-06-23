@@ -5,9 +5,13 @@ import podcastImage2 from '../assets/images/podcast/podcast-image2.jpg';
 import podcastImage3 from '../assets/images/podcast/podcast-image3.jpg';
 import landingPage from '../assets/images/prototype/landing.png';
 import registerPage from '../assets/images/prototype/register.png';
+import concertImage1 from '../assets/images/concert/booking-page.png';
+import concertImage2 from '../assets/images/concert/concerts-page.png';
+import concertImage3 from '../assets/images/concert/view-performer.png';
 
 const podcastImages = [podcastImage1, podcastImage2, podcastImage3];
 const prototypeImages = [landingPage, registerPage];
+const concertImages = [concertImage1, concertImage2, concertImage3];
 
 export const ImageCarousel = ({ images }) => {
     const [currentImage, setCurrentImage] = useState(0);
@@ -55,4 +59,4 @@ export const ImageCarousel = ({ images }) => {
 };
 
 // Export images too, if you want to import them from here
-export { podcastImages, prototypeImages };
+export { podcastImages, prototypeImages, concertImages };
