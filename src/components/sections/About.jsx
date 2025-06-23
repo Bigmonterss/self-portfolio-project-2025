@@ -3,8 +3,8 @@ import { FaLinkedin, FaGithub, FaInstagram} from "react-icons/fa";
 import { RevealOnScroll } from "../RevealOnScroll";
 
 export const About = () => {
-    const frontendSkills =["React", "TailwindCSS", "HTML5", "CSS3"]
-    const backendSkills = ["Java", "JavaScript", "Python", "Node.js", "Flask", "MySQL" ]
+    const frontendSkills =["React", "TailwindCSS", "HTML", "CSS"]
+    const backendSkills = ["Java", "JavaScript", "Python", "Node.js", "Flask", "SQLite" ]
 
     return (
         <section id="about" className="flex items-center justify-center py-20">
