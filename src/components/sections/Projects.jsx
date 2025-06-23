@@ -43,7 +43,7 @@ export const Projects = () => {
                     <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.2)]">
                         <h3 className="text-xl font-bold mb-2">Concert Booking Web Service</h3>
                         <p className="text-gray-400 mb-4">
-                            Given a fully styled frontend, our backend work focused on implementing a RESTful web service for browsing concerts, checking seat availability, and making secure reservations with authentication and real-time sell-out alerts. This was a group project.
+                            Given a fully styled frontend and other relevant code, our backend work focused on implementing a RESTful web service for browsing concerts, checking seat availability, and making secure reservations with authentication and real-time sell-out alerts. This was a group project.
                         </p>
                         <div className="mb-4">
                             {["Java", "SQL", "XML", "Git"].map((tech, key) => (
