@@ -17,7 +17,9 @@ export const Home = () => {
             {/* Foreground content */}
             <RevealOnScroll>
             <div>
-                <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent leading-right"> Hi, I'm Jayden Pham</h1>
+                <h1 className="text-center text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent leading-right"> 
+                    Hi, I'm Jayden Pham
+                </h1>
                 <p className ="text-gray-400 text-lg mb-8 max-w-lg mx-auto flex justify-center">
                     A final year student at the University of Auckland
                 </p>
