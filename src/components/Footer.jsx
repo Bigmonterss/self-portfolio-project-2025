@@ -6,7 +6,7 @@ export const Footer = () => {
     <footer className="w-full bg-[rgba(10,10,10,0.8)] backdrop-blur-lg border-t border-white/5 shadow-lg mt-8">
       <div className="max-w-5xl mx-auto px-4 py-4">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-          <a href="#home" className="text-xl font-bold text-white transition-all hover:scale-110">
+          <a className="text-xl font-bold text-white transition-all">
             <p className="flex items-center space-x-3 text-gray-300 justify-center md:justify-start">
               <span>Powered by</span>
               <FaReact size={24} />
