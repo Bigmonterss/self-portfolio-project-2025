@@ -21,7 +21,7 @@ export const Home = () => {
                     Hi, I'm Jayden Pham
                 </h1>
                 <p className ="text-gray-400 text-lg mb-8 max-w-lg mx-auto flex justify-center">
-                    A final year student at the University of Auckland
+                    A final year CompSci student at the University of Auckland.
                 </p>
 
                 <div className="flex justify-center space-x-4">
