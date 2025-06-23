@@ -1,6 +1,8 @@
 import { RevealOnScroll } from "../RevealOnScroll";
 import { useState } from "react";
+import { IoSend } from "react-icons/io5";
 import emailjs from 'emailjs-com';
+
 
 export const Contact = () => {
     const [formData, setFormData] = useState({
@@ -35,7 +37,7 @@ export const Contact = () => {
                             href="https://www.linkedin.com/in/jayden-pham-6043812b5/" 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="text-blue-500"
+                            className="text-blue-500 hover:underline"
                         >
                             message on LinkedIn
                         </a>
@@ -80,14 +82,14 @@ export const Contact = () => {
                                 onChange={(e) => setFormData({...formData, message: e.target.value})}
                             />
                         </div>
-
+                        {/* Submit button */}
                         <button 
                             type="submit" 
-                            className="w-full bg-blue-500 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4"
+                            className="w-full bg-blue-500 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4
+                                        flex items-center justify-center gap-2"
                         >
-                            Send Message
+                            Send Message <IoSend className="text-xl" />
                         </button>
-
                     </form>
                 </div>
             </RevealOnScroll>

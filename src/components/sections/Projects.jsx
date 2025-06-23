@@ -17,7 +17,7 @@ export const Projects = () => {
                             It features a user authentication system, as well as using a database to store all podcasts, ratings, playlists, and login credentials.
                         </p>
                         <div className="mb-4">
-                            {["Python", "Flask", "Jinja", "HTML", "CSS", "Git"].map((tech, key) => (
+                            {["Python", "Flask", "HTML", "CSS", "Git"].map((tech, key) => (
                                 <span key={key} className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20
                                                 hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.1)] transition-all"
                                 >
