@@ -1,6 +1,9 @@
 import { RevealOnScroll } from "../RevealOnScroll";
+import { ImageCarousel, podcastImages, prototypeImages } from '../ImageCarousel';
 
 export const Projects = () => {
+    
+
     return (
         <section id="projects" className="min-h-screen flex items-center justify-center py-20">
             <RevealOnScroll>
@@ -15,7 +18,7 @@ export const Projects = () => {
                             A podcast library web app where you are able to add, remove and browse for podcasts. 
                             The web app features an user authentication system, as well as using a database to store all podcasts, ratings, playlists, and login credentials.
                         </p>
-                        <div>
+                        <div className="mb-4">
                             {["Python", "Flask", "Jinja", "HTML", "CSS", "Git"].map((tech, key) => (
                                 <span key={key} className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20
                                                 hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.1)] transition-all"
@@ -24,10 +27,16 @@ export const Projects = () => {
                                 </span>
                             ))}
                         </div>
-
+                        <div className="relative mb-4">
+                            <ImageCarousel images={podcastImages}/>
+                        </div>
                         <div className="flex justify-between items-center">
-                            {/* for later */}
-                            <a href="#" className="text-blue-400 hover:text-blue-300 transition-colours my-4">
+                            <a 
+                                href="https://github.com/Bigmonterss/2024-podcast-library-groupproject" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="text-blue-400 hover:text-blue-300 transition-colours"
+                            >   
                                 View Project ➜
                             </a>
                         </div>
@@ -38,7 +47,7 @@ export const Projects = () => {
                         <p className="text-gray-400 mb-4">
                             A RESTful web service for a concert venue, which allows users to browse concerts, check seat availability, and make secure reservations with token-based authentication and real-time sell-out alerts.
                         </p>
-                        <div>
+                        <div className="mb-4">
                             {["Java", "SQL", "XML", "Git"].map((tech, key) => (
                                 <span key={key} className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20
                                                 hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.1)] transition-all"
@@ -61,7 +70,7 @@ export const Projects = () => {
                         <p className="text-gray-400 mb-4">
                             High-fidelity prototype of a pet-sitting service website featuring a landing page and user registration form. Focused on visual design, accessibility for users, and brand colour consistency derived from a custom HSL value. Includes layout based on Gestalt principles, semantic structure, and user-friendly form elements.
                         </p>
-                        <div>
+                        <div className="mb-4">
                             {["UX/UI", "Figma"].map((tech, key) => (
                                 <span key={key} className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20
                                                 hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.1)] transition-all"
@@ -70,14 +79,15 @@ export const Projects = () => {
                                 </span>
                             ))}
                         </div>
-
+                        <div className="relative mb-4">
+                            <ImageCarousel images={prototypeImages}/>
+                        </div>
                         <div className="flex justify-between items-center">
-                            {/* for later */}
                             <a href="https://www.figma.com/design/NPadKXRe7nwKTqYZb9xH0Y/Hi-Fidelity-Prototype-COMPSCI-345?node-id=34-230&t=RfbLftyNpM6TEAcr-1" 
                                 target="_blank" 
                                 rel="noopener noreferrer"
-                                className="text-blue-400 hover:text-blue-300 transition-colours my-4"
-                            >
+                                className="text-blue-400 hover:text-blue-300 transition-colours"
+                            >  
                                 View Project ➜
                             </a>
                         </div>
@@ -89,7 +99,7 @@ export const Projects = () => {
                         <p className="text-gray-400 mb-4">
                             To be done in Semester Two 2025.
                         </p>
-                        <div>
+                        <div className="mb-4">
                             {[].map((tech, key) => (
                                 <span key={key} className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20
                                                 hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.1)] transition-all"

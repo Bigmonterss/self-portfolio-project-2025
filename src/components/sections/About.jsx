@@ -14,7 +14,8 @@ export const About = () => {
                     <img 
                         /* Remove the hover scale if wanted */
                         className="w-50 h-50 rounded-full transition-all hover:scale-220" 
-                        src={profileImage} alt="Profile Image"/>
+                        src={profileImage} alt="Profile Image"
+                    />
                 </div>
 
                 <h2 className="text-3xl font-bold mb-2 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent text-center">
