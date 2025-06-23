@@ -26,11 +26,23 @@ export const Contact = () => {
         <section id="contact" className="min-h-screen flex items-center justify-center py-20">
             <RevealOnScroll>
                 <div className="mx-auto px-4" style={{ maxWidth: '600px', width: '90vw' }}>
-                    <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent text-center">
-                        Contact Me
+                    <h2 className="text-3xl font-bold mb-2 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent text-center">
+                        Contact Me.
                     </h2>
+                    <p className ="text-center text-gray-400 text-lg mb-8 max-w-lg mx-auto">
+                        Let's Connect! Fill out the form below, or drop me a{' '}
+                        <a
+                            href="https://www.linkedin.com/in/jayden-pham-6043812b5/" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-blue-500"
+                        >
+                            message on LinkedIn
+                        </a>
+                    </p>
                     <form className="space-y-6" onSubmit={handleSubmit}>
                         <div className="relative">
+                            <p className="text-gray-400 text-lg mb-2">Name</p>
                             <input 
                                 type="text" 
                                 id="name" 
@@ -38,11 +50,12 @@ export const Contact = () => {
                                 required 
                                 value={formData.name}
                                 className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
-                                placeholder="Name"
+                                placeholder="Your Name"
                                 onChange={(e) => setFormData({...formData, name: e.target.value})}
                             />
                         </div>
                         <div className="relative">
+                            <p className="text-gray-400 text-lg mb-2">Email</p>
                             <input 
                                 type="email" 
                                 id="email" 
@@ -55,6 +68,7 @@ export const Contact = () => {
                             />
                         </div>
                         <div className="relative">
+                            <p className="text-gray-400 text-lg mb-2">Message</p>
                             <textarea 
                                 id="message" 
                                 name="message" 
