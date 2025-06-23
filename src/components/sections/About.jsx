@@ -7,7 +7,7 @@ export const About = () => {
     const backendSkills = ["Java", "JavaScript", "Python", "Node.js", "Flask", "MySQL" ]
 
     return (
-        <section id="about" className="flex items-center justify-center py-50">
+        <section id="about" className="flex items-center justify-center py-20">
             <RevealOnScroll>
             <div className="max-w-3xl mx-auto px-4">
                 <div className='flex justify-center mb-4'>
