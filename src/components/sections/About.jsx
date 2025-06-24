@@ -1,6 +1,12 @@
 import profileImage from '../../assets/images/me.png';
+import uoaLogo from '../../assets/images/uoalogo.jpg';
 import { FaLinkedin, FaGithub, FaInstagram} from "react-icons/fa";
 import { RevealOnScroll } from "../RevealOnScroll";
+import { ExperienceItem } from '../ExperienceItem';
+import aussIcon from '../../assets/images/experience/auss/auss.jpg'
+import calisthenicsPoster from '../../assets/images/experience/auss/calisthenics.jpg'
+import duosnightPoster from '../../assets/images/experience/auss/1750676684574.jpg'
+
 
 export const About = () => {
     const frontendSkills =["React", "TailwindCSS", "HTML", "CSS"]
@@ -90,23 +96,60 @@ export const About = () => {
                 </div>
 
                 {/* Work and Education section*/}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                <div className="grid grid-cols-1 md:grid-cols-1 gap-6 mt-8">
                     <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
                         <h3 className="text-xl font-bold mb-4">Education</h3>
-                        <ul className="list-disc list-inside text-gray-300 space-y-2">
-                            <li>
-                                <strong> BSc in Computer Science</strong> - University of Auckland (2023-2025)
-                            </li>
-                            <li>
-                                Relevant Coursework: Web Development, UX/UI
-                            </li>
-                        </ul>
+                        <div>
+                            <ExperienceItem
+                                title="University of Auckland"
+                                role="Bachelor's of Computer Science"
+                                date="Feb 2023 – Dec 2025"
+                                icon={
+                                    <img
+                                    src={uoaLogo}
+                                    alt="AUSS Logo"
+                                    className="w-10 h-10 object-contain rounded-full"
+                                    />
+                                }
+                                >
+                                <div className="text-gray-300 space-y-1">
+                                    <p><strong>Certificate of Achievement (A+)</strong> – COMPSCI 210, PHYSICS 140</p>
+                                    <p><strong>Relevant Coursework:</strong> Web Development, UX/UI, Data Strucures & Algorithms</p>
+                                    <p><strong>Activities:</strong> Exec of AUSS (Auckland University Strength Society), Member of UoA Esports Club, WDCC, SESA, and UOACS</p>
+                                </div>
+                            </ExperienceItem>
+                        </div>
                     </div>
                     <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
-                        <h3 className="text-xl font-bold mb-4">Work Experience</h3>
+                        <h3 className="text-xl font-bold mb-4">Experience</h3>
                         <div>
-                            <h4 className="font-semibold"> Sales Assistant at Just Group (2022-2025) </h4>
-                            <p> Interacting with customers, providing product recommendations or assistance</p>
+                            <ExperienceItem
+                                title="Auckland University Strength Society"
+                                role="Social Media Designer Executive"
+                                date="Jan 2025 – Current"
+                                icon={
+                                    <img
+                                    src={aussIcon}
+                                    alt="AUSS Logo"
+                                    className="w-10 h-10 object-contain rounded-full"
+                                    />
+                                }
+                                >
+                                An executive member of the Auckland University Strength Society (AUSS) club in the social media team. 
+                                Designing engaging posts to build sign-ups for our training nights using Canva that is uploaded onto our AUSS Instagram page.
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                                    <img 
+                                        className="w-full h-auto object-cover rounded-lg" 
+                                        src={calisthenicsPoster} 
+                                        alt="Calisthenics Training Night Poster"
+                                    />
+                                    <img 
+                                        className="w-full h-auto object-cover rounded-lg" 
+                                        src={duosnightPoster} 
+                                        alt="Duos Training Night Poster"
+                                    />
+                                </div>
+                            </ExperienceItem>
                         </div>
                     </div>
                 </div>
