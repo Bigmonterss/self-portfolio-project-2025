@@ -1,25 +1,6 @@
-import { useEffect, useState } from "react"
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 
-export const MobileMenu = ({menuOpen, setMenuOpen}) => {
-    const [isDark, setIsDark] = useState(false);
-
-    // init theme from localStorage
-    useEffect(() => {
-        const saved = localStorage.getItem("theme");
-        const dark = saved === "dark";
-        setIsDark(dark);
-        document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
-        document.documentElement.classList.toggle("dark", dark);
-    }, []);
-
-    const toggleTheme = () => {
-        const next = !isDark;
-        setIsDark(next);
-        document.documentElement.setAttribute("data-theme", next ? "dark" : "light");
-        document.documentElement.classList.toggle("dark", next);
-        localStorage.setItem("theme", next ? "dark" : "light");
-    };
+export const MobileMenu = ({menuOpen, setMenuOpen, isDark, toggleTheme}) => {
 
     return (
         <div

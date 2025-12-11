@@ -1,31 +1,12 @@
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 
-export const Navbar = ({menuOpen, setMenuOpen}) => {
+export const Navbar = ({menuOpen, setMenuOpen, isDark, toggleTheme}) => {
     const text = "<Bigmonters/>"
-
-    const [isDark, setIsDark] = useState(false);
 
     useEffect(() => {
         document.body.style.overflow = menuOpen ? "hidden" : "";
     }, [menuOpen]);
-
-    // init theme from localStorage / apply CSS vars + tailwind 'dark' class
-    useEffect(() => {
-        const saved = localStorage.getItem("theme");
-        const dark = saved === "dark";
-        setIsDark(dark);
-        document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
-        document.documentElement.classList.toggle("dark", dark);
-    }, []);
-
-    const toggleTheme = () => {
-        const next = !isDark;
-        setIsDark(next);
-        document.documentElement.setAttribute("data-theme", next ? "dark" : "light");
-        document.documentElement.classList.toggle("dark", next);
-        localStorage.setItem("theme", next ? "dark" : "light");
-    };
 
     return <nav className="fixed top-0 w-full z-40 bg-[rgba(10, 10, 10, 0.8)] backdrop-blur-lg border-b border-white/10 shadow-sm">
         <div className="max-w-5xl mx-auto px-4">
@@ -37,7 +18,6 @@ export const Navbar = ({menuOpen, setMenuOpen}) => {
                     >
                     {text}
                 </a>
-
 
                 <div 
                     className ="w-7 h-7 relative cursor-pointer z-40 md:hidden text-xl" 

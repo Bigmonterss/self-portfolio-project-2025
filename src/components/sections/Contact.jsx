@@ -52,7 +52,7 @@ export const Contact = () => {
                                 required 
                                 value={formData.name}
                                 className="w-full bg-white/5 border rounded px-4 py-3  transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
-                                style={{ borderColor: "var(--border-color)", color: "var(--color)", placeholderColor: "var(--placeholder-color)" }}
+                                style={{ borderColor: "var(--border-color)", placeholderColor: "var(--placeholder-color)" }}
                                 placeholder="Your Name"
                                 onChange={(e) => setFormData({...formData, name: e.target.value})}
                             />
@@ -66,7 +66,7 @@ export const Contact = () => {
                                 required 
                                 value={formData.email}
                                 className="w-full bg-white/5 border rounded px-4 py-3 transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
-                                style={{ borderColor: "var(--border-color)", color: "var(--color)", placeholderColor: "var(--placeholder-color)" }}
+                                style={{ borderColor: "var(--border-color)", placeholderColor: "var(--placeholder-color)" }}
                                 placeholder="Email Address"
                                 onChange={(e) => setFormData({...formData, email: e.target.value})}
                             />
