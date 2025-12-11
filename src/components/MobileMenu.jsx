@@ -1,9 +1,25 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
+import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 export const MobileMenu = ({menuOpen, setMenuOpen}) => {
+    const [isDark, setIsDark] = useState(false);
 
+    // init theme from localStorage
+    useEffect(() => {
+        const saved = localStorage.getItem("theme");
+        const dark = saved === "dark";
+        setIsDark(dark);
+        document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+        document.documentElement.classList.toggle("dark", dark);
+    }, []);
 
-
+    const toggleTheme = () => {
+        const next = !isDark;
+        setIsDark(next);
+        document.documentElement.setAttribute("data-theme", next ? "dark" : "light");
+        document.documentElement.classList.toggle("dark", next);
+        localStorage.setItem("theme", next ? "dark" : "light");
+    };
 
     return (
         <div
@@ -49,6 +65,23 @@ export const MobileMenu = ({menuOpen, setMenuOpen}) => {
             > 
                 Contact 
             </a>
+
+            {/* Theme control for mobile menu */}        
+            <div className={`mt-2 flex items-center gap-3 transition-all duration-300
+                    ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}>
+                <span className="text-white">{isDark ? <MdDarkMode size={20}/> : <MdLightMode size={20}/> }</span>
+                <button
+                    onClick={toggleTheme}
+                    aria-pressed={isDark}
+                    className={`w-11 h-6 flex items-center p-1 rounded-full transition-colors
+                        ${isDark ? 'bg-gray-700' : 'bg-gray-300'}`}
+                    title="Toggle theme"
+                >
+                    <span className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform
+                        ${isDark ? 'translate-x-5' : 'translate-x-0'}`}/>
+                </button>
+            </div>
+            
         </div>
     );
 
