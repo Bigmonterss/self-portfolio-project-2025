@@ -10,8 +10,8 @@ import mhsLogo from '../../assets/images/mhslogo.jpg';
 
 
 export const About = () => {
-    const frontendSkills =["React", "TailwindCSS", "HTML", "CSS", "JavaScript"]
-    const backendSkills = ["Java", "JavaScript", "Python", "Node.js", "Flask", "SQLite", "C#", ".NET"]
+    const frontendSkills =["React", "TailwindCSS", "HTML", "CSS", "JavaScript", "Flutter"]
+    const backendSkills = ["Java", "JavaScript", "Python", "Node.js", "Flask", "SQLite", "C#", ".NET", "Firebase"]
     const tools = ["Git/GitHub", "Jira", "Figma", "Microsoft 365"]
 
     return (

@@ -10,6 +10,7 @@ export const Projects = () => {
                     Featured Projects
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
                     <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.2)]">
                         <h3 className="text-xl font-bold mb-2">Podcast Library</h3>
                         <p className="text-gray-400 mb-4">
@@ -17,7 +18,7 @@ export const Projects = () => {
                             It features a user authentication system, as well as using a database to store all podcasts, ratings, playlists, and login credentials.
                         </p>
                         <div className="mb-4">
-                            {["Python", "Flask", "HTML", "CSS", "Git"].map((tech, key) => (
+                            {["Python", "Flask", "HTML", "CSS", "Git",].map((tech, key) => (
                                 <span key={key} className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20
                                                 hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.1)] transition-all"
                                 >
@@ -57,12 +58,6 @@ export const Projects = () => {
                          <div className="relative">
                             <ImageCarousel images={concertImages}/>
                         </div>
-                        <div className="flex justify-between items-center">
-                            {/* for later */}
-                            <a href="#" className="text-blue-400 hover:text-blue-300 transition-colours my-4">
-                                View Project ➜
-                            </a>
-                        </div>
                     </div>
 
                     <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.2)]">
@@ -95,12 +90,13 @@ export const Projects = () => {
 
                     {/* Capstone */}
                     <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.2)]">
-                        <h3 className="text-xl font-bold mb-2">COMPSCI 399 Capstone Project</h3>
+                        <h3 className="text-xl font-bold mb-2">Capstone Project - BearLingo</h3>
                         <p className="text-gray-400 mb-4">
-                            To be done in Semester Two 2025.
+                            An AI cross-platform job-seeking and career progression/learning application inspired by Duolingo. My responsibilities included building the frontend with a modular, 
+                            component-based design, and integrating Firebase for authentication and real-time database features. Delivering biweekly progress updates and live demos to the client.
                         </p>
                         <div className="mb-4">
-                            {[].map((tech, key) => (
+                            {["Flutter", "Dart", "Firebase", "OpenAI", "Git"].map((tech, key) => (
                                 <span key={key} className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20
                                                 hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.1)] transition-all"
                                 >
@@ -111,7 +107,10 @@ export const Projects = () => {
 
                         <div className="flex justify-between items-center">
                             {/* for later */}
-                            <a href="#" className="text-blue-400 hover:text-blue-300 transition-colours my-4">
+                            <a href="https://github.com/uoa-compsci399-s2-2025/capstone-project-s2-2025-team-14.git" 
+                                target="_blank"
+                                rel="noopener norefferer"
+                                className="text-blue-400 hover:text-blue-300 transition-colours my-4">
                                 View Project ➜
                             </a>
                         </div>
