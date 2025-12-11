@@ -60,7 +60,7 @@ export const About = () => {
 
                 {/* Small intro about me section*/}
                 <div className="rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all">
-                    <p className="text-gray-300 mb-6">
+                    <p className="text-gray-400 mb-6">
                         I am a fresh graduate student who studied a Bachelor of Science (BSc) majoring in Computer Science at The University of Auckland. 
                         I chose to pursue in Computer Science because I've always grown up being surrounded by technology. 
                         I am passionate into becoming a front-end developer with expertise in creative and technical skills to create or solve products for clients.
