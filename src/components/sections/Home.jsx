@@ -1,36 +1,56 @@
 import { RevealOnScroll } from "../RevealOnScroll";
-import homeImage from "../../assets/images/home.png";
-
+import { useEffect, useRef, useState } from "react";
 
 export const Home = () => {
+    const sentences = [
+        "Graduate student at the University of Auckland.",
+        "Aspiring Software Developer.",
+        "Tech enthusiast and lifelong learner.",
+        "Cat Lover.",
+        "Powerlifter.",
+    ];
+
+    const [index, setIndex] = useState(0);
+    const [visible, setVisible] = useState(true);
+    const timeoutRef = useRef(null);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            // fade out
+            setVisible(false);
+            // after fade-out, switch sentence and fade in
+            timeoutRef.current = setTimeout(() => {
+                setIndex((i) => (i + 1) % sentences.length);
+                setVisible(true);
+            }, 300); // match duration of CSS transition
+        }, 3000); // time each sentence stays visible
+
+        return () => {
+            clearInterval(interval);
+            clearTimeout(timeoutRef.current);
+        };
+    }, []);
+
     return (
         <section
             id="home"
             className="min-h-screen relative flex items-center justify-center"
         >
-            {/* Background image layer */}
-            
-            {/*
-            <div
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-25"
-                style={{ backgroundImage: `url(${homeImage})` }}   
-            >
-                background blur
-                <div 
-                    className="absolute bottom-0 w-full h-48 bg-gradient-to-b from-transparent to-black"
-                    >
-                </div>
-            </div>
-            */}
-
             {/* Foreground content */}
             <RevealOnScroll>
             <div>
-                <h1 className="text-center text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent leading-right"> 
-                    Hi, I'm Jayden Pham
+                <h1 className="text-center text-5xl md:text-7xl font-bold mb-2 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent leading-right"> 
+                    Hi, I'm Jayden Pham.
                 </h1>
-                <p className ="text-center text-lg mb-8 max-w-lg mx-auto flex justify-center" style={{ color: "var(--text-color)" }}>
-                    A final year CompSci student at the University of Auckland.
+
+                <p
+                    className={`text-center text-lg mb-8 max-w-lg mx-auto flex justify-center transition-opacity duration-300`}
+                    style={{
+                        color: "var(--text-color)",
+                        opacity: visible ? 1 : 0,
+                    }}
+                >
+                    {sentences[index]}
                 </p>
 
                 <div className="flex justify-center space-x-4">
