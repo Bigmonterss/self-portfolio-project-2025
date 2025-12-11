@@ -14,26 +14,37 @@ body {
 
 :root {
   --background-color: white;
+  --text-color: #4b5563;
   --color: black;
   --theme-toggle-bg: white;
   --border-color: rgba(0,0,0,0.2);
   --placeholder-color: rgba(0,0,0,0.2);
-  --text-color: #4b5563;
+  --cursor-color: 0, 0, 0; 
 }
 
 [data-theme="dark"] {
   --background-color: #121212;
+  --text-color: #d9dbdd;
   --color: #e0e0e0;
   --theme-toggle-bg: black;
   --border-color: rgba(255,255,255,0.1);
   --placeholder-color: rgba(255,255,255,0.1);
-  --text-color: #9ca3af;
+  --cursor-color: 255, 255, 255; 
 }
+
+.cursor-container {
+  filter: var(--cursor-filter);
+  transition: filter 0.3s ease;
+}
+
+
+
 
 input::placeholder,
 textarea::placeholder {
   color: var(--placeholder-color);
-  opacity: 1; /* ensure full opacity for placeholder */
+  opacity: 1;
+  transition: color 0.5s ease;
 }
 
 /* Theme dropdown styles */
@@ -75,7 +86,9 @@ textarea::placeholder {
     color: #3b82f6;        
 }
 
-
+input, textarea, p, h1, h2, h3, h4, h5, h6, a, li, button {
+  transition: all 0.5s ease;
+}
 
 @layer utilities {
   @keyframes blink {
