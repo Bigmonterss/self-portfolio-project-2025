@@ -6,6 +6,7 @@ import { ExperienceItem } from '../ExperienceItem';
 import aussIcon from '../../assets/images/experience/auss/auss.jpg'
 import calisthenicsPoster from '../../assets/images/experience/auss/calisthenics.jpg'
 import duosnightPoster from '../../assets/images/experience/auss/1750676684574.jpg'
+import mhsLogo from '../../assets/images/mhslogo.jpg';
 
 
 export const About = () => {
@@ -107,15 +108,33 @@ export const About = () => {
                                 icon={
                                     <img
                                     src={uoaLogo}
-                                    alt="AUSS Logo"
+                                    alt="University of Auckland Logo"
                                     className="w-10 h-10 object-contain rounded-full"
                                     />
                                 }
                                 >
                                 <div className="text-gray-300 space-y-1">
-                                    <p><strong>Certificate of Achievement (A+)</strong> – COMPSCI 210, PHYSICS 140</p>
-                                    <p><strong>Relevant Coursework:</strong> Web Development, UX/UI, Data Strucures & Algorithms</p>
-                                    <p><strong>Activities:</strong> Exec of AUSS (Auckland University Strength Society), Member of UoA Esports Club, WDCC, SESA, and UOACS</p>
+                                    <p><strong>Certificate of Achievement (A+): </strong> COMPSCI 210, PHYSICS 140</p>
+                                    <p><strong>Relevant Coursework: </strong> Web Development, UX/UI, Data Strucures & Algorithms</p>
+                                    <p><strong>Activities: </strong> Exec of AUSS (Auckland University Strength Society), Member of UoA Esports Club, WDCC, SESA, and UOACS</p>
+                                </div>
+                            </ExperienceItem>
+                            <ExperienceItem
+                                title="Manurewa High School"
+                                role="National Certificate of Educational Achievement"
+                                date="Jan 2018 – Dec 2022"
+                                icon={
+                                    <img
+                                    src={mhsLogo}
+                                    alt="Manurewa High School Logo"
+                                    className="w-10 h-10 object-contain rounded-full"
+                                    />
+                                }
+                                >
+                                <div className="text-gray-300 space-y-1">
+                                    <p><strong>Qualifications: </strong> NCEA Level 1, 2 with Excellence Endorsement, NCEA Level 3 with Achieved</p>
+                                    <p><strong>Awards: </strong>Trophy Award Outstanding Contribution to the Creative Arts, Colberty Award for Endeavour in Physics - Trophy + $150</p>
+                                    <p><strong>Activities: </strong> Environmental Council, Year 9 Concert Band, Badminton</p>
                                 </div>
                             </ExperienceItem>
                         </div>
@@ -126,7 +145,7 @@ export const About = () => {
                             <ExperienceItem
                                 title="Auckland University Strength Society"
                                 role="Social Media Designer Executive"
-                                date="Jan 2025 – Current"
+                                date="Jan 2025 – Dec 2025"
                                 icon={
                                     <img
                                     src={aussIcon}
