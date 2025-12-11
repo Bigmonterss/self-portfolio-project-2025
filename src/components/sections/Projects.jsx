@@ -11,9 +11,11 @@ export const Projects = () => {
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-                    <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.2)]">
+                    <div className="p-6 rounded-xl border hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.2)]"
+                        style={{ borderColor: 'var(--border-color)' }}
+                    >
                         <h3 className="text-xl font-bold mb-2">Podcast Library</h3>
-                        <p className="text-gray-400 mb-4">
+                        <p className="mb-4" style={{ color: "var(--text-color)" }}>
                             A full-stack group project where we had to create a podcast library web app where you are able to add, remove and browse for podcasts. 
                             It features a user authentication system, as well as using a database to store all podcasts, ratings, playlists, and login credentials.
                         </p>
@@ -41,9 +43,11 @@ export const Projects = () => {
                         </div>
                     </div>
 
-                    <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.2)]">
+                    <div className="p-6 rounded-xl border hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.2)]"
+                        style={{ borderColor: 'var(--border-color)' }}
+                    >
                         <h3 className="text-xl font-bold mb-2">Concert Booking Web Service</h3>
-                        <p className="text-gray-400 mb-4">
+                        <p className="mb-4" style={{ color: "var(--text-color)" }}>
                             Given a fully styled frontend and other relevant code, our backend work focused on implementing a RESTful web service for browsing concerts, checking seat availability, and making secure reservations with authentication and real-time sell-out alerts. This was a group project.
                         </p>
                         <div className="mb-4">
@@ -60,9 +64,11 @@ export const Projects = () => {
                         </div>
                     </div>
 
-                    <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.2)]">
+                    <div className="p-6 rounded-xl border hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.2)]"
+                        style={{ borderColor: 'var(--border-color)' }}
+                    >
                         <h3 className="text-xl font-bold mb-2">High-Fidelity Prototype</h3>
-                        <p className="text-gray-400 mb-4">
+                        <p className="mb-4" style={{ color: "var(--text-color)" }}>
                             High-fidelity prototype of a pet-sitting service website featuring a landing page and user registration form. Focused on visual design, accessibility for users, and brand colour consistency derived from a custom HSL value. Includes layout based on Gestalt principles, semantic structure, and user-friendly form elements.
                         </p>
                         <div className="mb-4">
@@ -89,9 +95,11 @@ export const Projects = () => {
                     </div>
 
                     {/* Capstone */}
-                    <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.2)]">
+                    <div className="p-6 rounded-xl border hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.2)]"
+                        style={{ borderColor: 'var(--border-color)' }}
+                    >
                         <h3 className="text-xl font-bold mb-2">Capstone Project - BearLingo</h3>
-                        <p className="text-gray-400 mb-4">
+                        <p className="mb-4" style={{ color: "var(--text-color)" }}>
                             An AI cross-platform job-seeking and career progression/learning application inspired by Duolingo. My responsibilities included building the frontend with a modular, 
                             component-based design, and integrating Firebase for authentication and real-time database features. Delivering biweekly progress updates and live demos to the client.
                         </p>

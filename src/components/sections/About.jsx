@@ -59,8 +59,10 @@ export const About = () => {
             
 
                 {/* Small intro about me section*/}
-                <div className="rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all">
-                    <p className="text-gray-400 mb-6">
+                <div className="rounded-xl p-8 border hover:-translate-y-1 transition-all"
+                    style={{ borderColor: 'var(--border-color)' }}
+                >
+                    <p className="mb-6" style={{ color: "var(--text-color)" }}>
                         I am a fresh graduate student who studied a Bachelor of Science (BSc) majoring in Computer Science at The University of Auckland. 
                         I chose to pursue in Computer Science because I've always grown up being surrounded by technology. 
                         I am passionate into becoming a front-end developer with expertise in creative and technical skills to create or solve products for clients.
@@ -113,7 +115,9 @@ export const About = () => {
 
                 {/* Work and Education section*/}
                 <div className="grid grid-cols-1 md:grid-cols-1 gap-6 mt-8">
-                    <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
+                    <div className="rounded-xl p-8 border hover:-translate-y-1 transition-all"
+                        style={{ borderColor: 'var(--border-color)' }}
+                    >
                         <h3 className="text-xl font-bold mb-4">Education</h3>
                         <div>
                             <ExperienceItem
@@ -128,7 +132,7 @@ export const About = () => {
                                     />
                                 }
                                 >
-                                <div className="text-gray-300 space-y-1">
+                                <div className="space-y-1" style={{ color: "var(--text-color)" }}>
                                     <p><strong>Certificate of Achievement (A+): </strong> COMPSCI 210, PHYSICS 140</p>
                                     <p><strong>Relevant Coursework: </strong> Web Development, UX/UI, Data Strucures & Algorithms</p>
                                     <p><strong>Activities: </strong> Exec of AUSS (Auckland University Strength Society), Member of UoA Esports Club, WDCC, SESA, and UOACS</p>
@@ -146,7 +150,9 @@ export const About = () => {
                                     />
                                 }
                                 >
-                                <div className="text-gray-300 space-y-1">
+                                <div className="space-y-1"
+                                    style={{ color: "var(--text-color)" }}
+                                >
                                     <p><strong>Qualifications: </strong> NCEA Level 1, 2 with Excellence Endorsement, NCEA Level 3 with Achieved</p>
                                     <p><strong>Awards: </strong>Trophy Award Outstanding Contribution to the Creative Arts, Colberty Award for Endeavour in Physics - Trophy + $150</p>
                                     <p><strong>Activities: </strong> Environmental Council, Year 9 Concert Band, Badminton</p>
@@ -154,7 +160,9 @@ export const About = () => {
                             </ExperienceItem>
                         </div>
                     </div>
-                    <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
+                    <div className="rounded-xl p-8 border hover:-translate-y-1 transition-all"
+                        style={{ borderColor: 'var(--border-color)' }}
+                    >
                         <h3 className="text-xl font-bold mb-4">Experience</h3>
                         <div>
                             <ExperienceItem
@@ -169,8 +177,10 @@ export const About = () => {
                                     />
                                 }
                                 >
-                                An executive member of the Auckland University Strength Society (AUSS) club in the social media team. 
+                                <p style={{ color: "var(--text-color)" }}>
+                                    An executive member of the Auckland University Strength Society (AUSS) club in the social media team. 
                                 Designing engaging posts to build sign-ups for our training nights using Canva that is uploaded onto our AUSS Instagram page.
+                                </p>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                                     <img 
                                         className="w-full h-auto object-cover rounded-lg" 

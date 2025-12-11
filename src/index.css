@@ -15,14 +15,25 @@ body {
   --background-color: white;
   --color: black;
   --theme-toggle-bg: white;
+  --border-color: rgba(0,0,0,0.2);
+  --placeholder-color: rgba(0,0,0,0.2);
+  --text-color: #4b5563;
 }
 
 [data-theme="dark"] {
   --background-color: #121212;
   --color: #e0e0e0;
-  --theme-toggle-bg: black
+  --theme-toggle-bg: black;
+  --border-color: rgba(255,255,255,0.1);
+  --placeholder-color: rgba(255,255,255,0.1);
+  --text-color: #9ca3af;
 }
 
+input::placeholder,
+textarea::placeholder {
+  color: var(--placeholder-color);
+  opacity: 1; /* ensure full opacity for placeholder */
+}
 
 /* Theme dropdown styles */
 .theme-dropdown {
