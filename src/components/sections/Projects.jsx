@@ -1,5 +1,5 @@
 import { RevealOnScroll } from "../RevealOnScroll";
-import { ImageCarousel, podcastImages, prototypeImages, concertImages } from '../ProjectImageCarousel';
+import { ImageCarousel, podcastImages, prototypeImages, concertImages, bearlingoImages } from '../ProjectImageCarousel';
 
 export const Projects = () => {
     return (
@@ -103,6 +103,10 @@ export const Projects = () => {
                                     {tech}
                                 </span>
                             ))}
+                        </div>
+
+                        <div className="relative mb-4">
+                            <ImageCarousel images={bearlingoImages}/>
                         </div>
 
                         <div className="flex justify-between items-center">

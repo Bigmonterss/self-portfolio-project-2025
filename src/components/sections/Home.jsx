@@ -9,16 +9,19 @@ export const Home = () => {
             className="min-h-screen relative flex items-center justify-center"
         >
             {/* Background image layer */}
+            
+            {/*
             <div
                 className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-25"
                 style={{ backgroundImage: `url(${homeImage})` }}   
             >
-                {/*Background bottom blur */}
+                background blur
                 <div 
                     className="absolute bottom-0 w-full h-48 bg-gradient-to-b from-transparent to-black"
                     >
                 </div>
             </div>
+            */}
 
             {/* Foreground content */}
             <RevealOnScroll>
