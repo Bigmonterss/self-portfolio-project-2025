@@ -10,8 +10,9 @@ import mhsLogo from '../../assets/images/mhslogo.jpg';
 
 
 export const About = () => {
-    const frontendSkills =["React", "TailwindCSS", "HTML", "CSS"]
-    const backendSkills = ["Java", "JavaScript", "Python", "Node.js", "Flask", "SQLite" ]
+    const frontendSkills =["React", "TailwindCSS", "HTML", "CSS", "JavaScript"]
+    const backendSkills = ["Java", "JavaScript", "Python", "Node.js", "Flask", "SQLite", "C#", ".NET"]
+    const tools = ["Git/GitHub", "Jira", "Figma", "Microsoft 365"]
 
     return (
         <section id="about" className="flex items-center justify-center py-20">
@@ -60,7 +61,7 @@ export const About = () => {
                 {/* Small intro about me section*/}
                 <div className="rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all">
                     <p className="text-gray-300 mb-6">
-                        I am a final year student currently studying a Bachelor of Science (BSc) majoring in Computer Science at The University of Auckland. 
+                        I am a fresh graduate student who studied a Bachelor of Science (BSc) majoring in Computer Science at The University of Auckland. 
                         I chose to pursue in Computer Science because I've always grown up being surrounded by technology. 
                         I am passionate into becoming a front-end developer with expertise in creative and technical skills to create or solve products for clients.
                         I am always willing to look for opportunities to upskill and improve on building more meaningful and effective applications.  
@@ -94,6 +95,20 @@ export const About = () => {
                             </div>
                         </div>
                     </div>
+
+                    {/*Tools section*/}
+                    <div className="rounded-xl p-6 hover:-translate-y-1 transition all">
+                            <h3 className="text-xl font-bold mb-4"> Tools </h3>
+                            <div className="flex flex-wrap gap-2">
+                                {tools.map((tech, key) => (
+                                    <span key={key} className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20
+                                                hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.2)] transition"
+                                    >
+                                        {tech}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
                 </div>
 
                 {/* Work and Education section*/}
