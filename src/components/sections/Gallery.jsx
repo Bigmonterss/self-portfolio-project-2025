@@ -68,7 +68,7 @@ export const Gallery = () => {
           <p className="text-lg flex justify-center mb-8" style={{ color: 'var(--text-color)' }}>Some highlighted activities I've done!</p>
 
           {/* 2026 Section */}
-          <p className="text-[25px] font-bold flex justify-center mb-1" style={{ color: 'var(--text-color)' }}>2026</p>
+          <p className="text-[25px] font-bold flex justify-center mb-1">2026</p>
           {/* Vietnam Dropdown */}
           <div
             className="mb-2 flex justify-center items-center cursor-pointer space-x-2 hover:text-blue-400 transition"
@@ -89,7 +89,7 @@ export const Gallery = () => {
 
 
           {/* 2025 Section */}
-          <p className="text-[25px] font-bold flex justify-center mb-1" style={{ color: 'var(--text-color)' }}>2025</p>
+          <p className="text-[25px] font-bold flex justify-center mb-1">2025</p>
           {/* Omanawanui Dropdown */}
           <div
             className="mb-2 flex justify-center items-center cursor-pointer space-x-2 hover:text-blue-400 transition"

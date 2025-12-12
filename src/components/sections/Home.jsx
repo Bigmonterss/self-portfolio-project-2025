@@ -2,6 +2,7 @@ import { RevealOnScroll } from "../RevealOnScroll";
 import JumpNotification from "../JumpNotification";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { CiShare1 } from "react-icons/ci";
 
 
 export const Home = () => {
@@ -70,11 +71,21 @@ export const Home = () => {
                         Contact Me
                     </a>
                 </div>
-                <Link 
-                    to="/self-portfolio-project-2025/about" 
-                    className="text-m flex justify-center py-3 hover:text-blue-500 transition" style={{ color: 'var(--text-color)' }}>
-                    Learn more about me
+                <div>
+                    <Link 
+                    to="/about" 
+                    className="text-m flex justify-center items-center py-3" 
+                    style={{ color: 'var(--learn-color)' }}
+                    
+                    >
+                    Learn more about me 
+                    <span className="ml-1">
+                        <CiShare1 size={17}/>
+                    </span>
                 </Link>
+                </div>
+                
+
             </div>
             <JumpNotification />
         </section>
