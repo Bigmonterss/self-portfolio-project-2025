@@ -47,7 +47,6 @@ function App() {
         isDark={isDark} 
         toggleTheme={toggleTheme} 
       />
-      <div className="pt-16">{/* offset for fixed navbar */}
       <Routes>
         {/* MAIN PAGE (Home + Projects + Contact) */}
         <Route
@@ -73,7 +72,7 @@ function App() {
           }
         />
       </Routes>
-      </div>
+      
     </BrowserRouter>
   );
 }

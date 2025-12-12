@@ -68,7 +68,8 @@ export const ImageCarousel = ({ images, autoplay = true, autoplaySpeed = 3500 })
                 ))}
             </div>
             
-            {/* Carousel}
+            
+            {/* Carousel 
             <button aria-label="Previous image" onClick={handlePrev} className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black/40 text-white px-1 py-2 rounded-full hover:bg-black/60 z-10">
                 <FaLongArrowAltLeft />
             </button>

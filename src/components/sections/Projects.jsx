@@ -37,31 +37,31 @@ export const Projects = () => {
                             <div className="flex transition-transform duration-500" style={{ transform: `translateX(-${index * 100}%)` }}>
                                 {projects.map((p, i) => (
                                     <div key={i} className="w-full flex-shrink-0 px-2">
-                                        <div className="p-5 rounded-xl border max-w-xl md:max-w-2xl mx-auto" style={{ borderColor: 'var(--border-color)' }}>
+                                        <div className="p-5 rounded-xl border w-full max-w-sm md:max-w-2xl mx-auto" style={{ borderColor: 'var(--border-color)' }}>
                                             <h3 className="text-xl font-bold mb-2">{p.title}</h3>
                                             <p className="mb-4" style={{ color: 'var(--text-color)' }}>{p.desc}</p>
                                             <div className="mb-4">
                                                 {p.tech.map((t, k) => (
                                                     <span key={k} className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm mr-2 mb-2 inline-block">{t}</span>
                                                 ))}
-                                            <button
-                                                aria-label="Previous project"
-                                                onClick={prev}
-                                                className="absolute left-4 md:left-20 top-1/2 transform -translate-y-1/2 p-4 rounded-full shadow-lg z-20
-                                                    bg-white text-black border border-black/10 hover:bg-gray-50
-                                                    dark:bg-black/5 dark:text-white dark:border-white/20 dark:hover:bg-black/10"
-                                            >
-                                                <FaLongArrowAltLeft />
-                                            </button>
-                                            <button
-                                                aria-label="Next project"
-                                                onClick={next}
-                                                className="absolute right-4 md:right-20 top-1/2 transform -translate-y-1/2 p-4 rounded-full shadow-lg z-20
-                                                    bg-white text-black border border-black/10 hover:bg-gray-50
-                                                    dark:bg-black/5 dark:text-white dark:border-white/20 dark:hover:bg-black/10"
-                                            >
-                                                <FaLongArrowAltRight />
-                                            </button>
+                                            </div>
+
+                                            <div className="relative mb-4">
+                                                <div className="mx-auto max-w-full">
+                                                    <ImageCarousel images={p.images} />
+                                                </div>
+                                            </div>
+
+                                            <div className="flex justify-between items-center">
+                                                <a href={p.link} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors">View Project ➜</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        <button
                             aria-label="Previous project"
                             onClick={prev}
                             style={{
@@ -69,7 +69,7 @@ export const Projects = () => {
                                 border: "1px solid var(--border-color)",     // gray outline
                                 color: "var(--color)",                       // arrow color
                             }}
-                            className="absolute left-20 top-1/2 transform -translate-y-1/2 p-4 rounded-full shadow-lg z-20 hover:opacity-90 transition"
+                            className="absolute left-4 md:left-20 top-1/2 transform -translate-y-1/2 p-4 rounded-full shadow-lg z-20 hover:opacity-90 transition"
                             >
                             <FaLongArrowAltLeft size={20} />
                             </button>
@@ -82,7 +82,7 @@ export const Projects = () => {
                                 border: "1px solid var(--border-color)",
                                 color: "var(--color)",
                             }}
-                            className="absolute right-20 top-1/2 transform -translate-y-1/2 p-4 rounded-full shadow-lg z-20 hover:opacity-90 transition"
+                            className="absolute right-4 md:right-20 top-1/2 transform -translate-y-1/2 p-4 rounded-full shadow-lg z-20 hover:opacity-90 transition"
                             >
                             <FaLongArrowAltRight size={20} />
                             </button>
