@@ -9,8 +9,9 @@ export const Home = () => {
         "Graduate student at the University of Auckland.",
         "Aspiring Software Developer.",
         "Tech enthusiast and lifelong learner.",
-        "Cat Lover.",
+        "Cat lover.",
         "Powerlifter.",
+        "K-Pop Enthusiast.",
     ];
 
     const [index, setIndex] = useState(0);

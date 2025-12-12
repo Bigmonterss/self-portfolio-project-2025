@@ -17,7 +17,7 @@ export const MobileMenu = ({menuOpen, setMenuOpen, isDark, toggleTheme}) => {
             &times;
             </button>
             <HashLink 
-                smooth to="/#home" 
+                smooth to="/self-portfolio-project-2025#home" 
                 onClick={() => setMenuOpen(false)} 
                 className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300 
                         ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
@@ -33,7 +33,7 @@ export const MobileMenu = ({menuOpen, setMenuOpen, isDark, toggleTheme}) => {
                 About 
             </Link>
             <HashLink 
-                smooth to="/#projects" 
+                smooth to="/self-portfolio-project-2025#projects" 
                 onClick={() => setMenuOpen(false)}
                 className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300 
                         ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
@@ -41,7 +41,7 @@ export const MobileMenu = ({menuOpen, setMenuOpen, isDark, toggleTheme}) => {
                 Projects 
             </HashLink>
             <HashLink 
-                smooth to="/#contact" 
+                smooth to="/self-portfolio-project-2025#contact" 
                 onClick={() => setMenuOpen(false)} 
                 className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300 
                         ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}

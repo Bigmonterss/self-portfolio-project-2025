@@ -1,134 +1,100 @@
 import { RevealOnScroll } from "../RevealOnScroll";
 import { ImageCarousel, podcastImages, prototypeImages, concertImages, bearlingoImages } from '../ProjectImageCarousel';
+import { useState, useEffect } from 'react';
+import { FaLongArrowAltLeft, FaLongArrowAltRight } from 'react-icons/fa';
 
 export const Projects = () => {
+    const projects = [
+        { title: 'Podcast Library', desc: 'A full-stack group project where we had to create a podcast library web app where you are able to add, remove and browse for podcasts. It features a user authentication system, as well as using a database to store all podcasts, ratings, playlists, and login credentials.', tech: ['Python','Flask','HTML','CSS','Git'], images: podcastImages, link: 'https://github.com/Bigmonterss/2024-podcast-library-groupproject' },
+        { title: 'Concert Booking', desc: 'Given a fully styled frontend and other relevant code, our backend work focused on implementing a RESTful web service for browsing concerts, checking seat availability, and making secure reservations with authentication and real-time sell-out alerts. This was a group project.', tech: ['Java','SQL','XML'], images: concertImages, link: '#' },
+        { title: 'High-Fidelity Prototype', desc: 'High-fidelity prototype of a pet-sitting service website featuring a landing page and user registration form. Focused on visual design, accessibility for users, and brand colour consistency derived from a custom HSL value. Includes layout based on Gestalt principles, semantic structure, and user-friendly form elements.', tech: ['UX/UI','Figma'], images: prototypeImages, link: 'https://www.figma.com' },
+        { title: 'Capstone - BearLingo', desc: 'An AI cross-platform job-seeking and career progression/learning application inspired by Duolingo. My responsibilities included building the frontend with a modular, component-based design, and integrating Firebase for authentication and real-time database features. Delivering biweekly progress updates and live demos to the client.', tech: ['Flutter','Dart','Firebase','OpenAI','Git'], images: bearlingoImages, link: 'https://github.com/uoa-compsci399-s2-2025/capstone-project-s2-2025-team-14.git' }
+    ];
+
+    const [index, setIndex] = useState(0);
+
+    const prev = () => setIndex((i) => (i - 1 + projects.length) % projects.length);
+    const next = () => setIndex((i) => (i + 1) % projects.length);
+
+    // keyboard support for project navigation
+    useEffect(() => {
+        const onKey = (e) => {
+            if (e.key === 'ArrowLeft') prev();
+            if (e.key === 'ArrowRight') next();
+        };
+        window.addEventListener('keydown', onKey);
+        return () => window.removeEventListener('keydown', onKey);
+    }, []);
+
     return (
         <section id="projects" className="min-h-screen flex items-center justify-center py-20">
             <RevealOnScroll>
-            <div className="max-w-5xl mx-auto px-4">
-                <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent text-center">
-                    Featured Projects
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="max-w-5xl mx-auto px-4">
+                    <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent text-center">Featured Projects</h2>
+                    <p className="flex justify-center mb-8">A showcase of projects I have contirbuted in.</p>
+                    <div className="relative">
+                        <div className="overflow-hidden">
+                            <div className="flex transition-transform duration-500" style={{ transform: `translateX(-${index * 100}%)` }}>
+                                {projects.map((p, i) => (
+                                    <div key={i} className="w-full flex-shrink-0 px-2">
+                                        <div className="p-5 rounded-xl border max-w-xl md:max-w-2xl mx-auto" style={{ borderColor: 'var(--border-color)' }}>
+                                            <h3 className="text-xl font-bold mb-2">{p.title}</h3>
+                                            <p className="mb-4" style={{ color: 'var(--text-color)' }}>{p.desc}</p>
+                                            <div className="mb-4">
+                                                {p.tech.map((t, k) => (
+                                                    <span key={k} className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm mr-2 mb-2 inline-block">{t}</span>
+                                                ))}
+                                            <button
+                                                aria-label="Previous project"
+                                                onClick={prev}
+                                                className="absolute left-4 md:left-20 top-1/2 transform -translate-y-1/2 p-4 rounded-full shadow-lg z-20
+                                                    bg-white text-black border border-black/10 hover:bg-gray-50
+                                                    dark:bg-black/5 dark:text-white dark:border-white/20 dark:hover:bg-black/10"
+                                            >
+                                                <FaLongArrowAltLeft />
+                                            </button>
+                                            <button
+                                                aria-label="Next project"
+                                                onClick={next}
+                                                className="absolute right-4 md:right-20 top-1/2 transform -translate-y-1/2 p-4 rounded-full shadow-lg z-20
+                                                    bg-white text-black border border-black/10 hover:bg-gray-50
+                                                    dark:bg-black/5 dark:text-white dark:border-white/20 dark:hover:bg-black/10"
+                                            >
+                                                <FaLongArrowAltRight />
+                                            </button>
+                            aria-label="Previous project"
+                            onClick={prev}
+                            style={{
+                                backgroundColor: "var(--theme-toggle-bg)",   // white in light, black in dark
+                                border: "1px solid var(--border-color)",     // gray outline
+                                color: "var(--color)",                       // arrow color
+                            }}
+                            className="absolute left-20 top-1/2 transform -translate-y-1/2 p-4 rounded-full shadow-lg z-20 hover:opacity-90 transition"
+                            >
+                            <FaLongArrowAltLeft size={20} />
+                            </button>
 
-                    <div className="p-6 rounded-xl border hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.2)]"
-                        style={{ borderColor: 'var(--border-color)' }}
-                    >
-                        <h3 className="text-xl font-bold mb-2">Podcast Library</h3>
-                        <p className="mb-4" style={{ color: "var(--text-color)" }}>
-                            A full-stack group project where we had to create a podcast library web app where you are able to add, remove and browse for podcasts. 
-                            It features a user authentication system, as well as using a database to store all podcasts, ratings, playlists, and login credentials.
-                        </p>
-                        <div className="mb-4">
-                            {["Python", "Flask", "HTML", "CSS", "Git",].map((tech, key) => (
-                                <span key={key} className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20
-                                                hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.1)] transition-all"
-                                >
-                                    {tech}
-                                </span>
+                            <button
+                            aria-label="Next project"
+                            onClick={next}
+                            style={{
+                                backgroundColor: "var(--theme-toggle-bg)",
+                                border: "1px solid var(--border-color)",
+                                color: "var(--color)",
+                            }}
+                            className="absolute right-20 top-1/2 transform -translate-y-1/2 p-4 rounded-full shadow-lg z-20 hover:opacity-90 transition"
+                            >
+                            <FaLongArrowAltRight size={20} />
+                            </button>
+
+
+                        <div className="flex justify-center gap-2 mt-6">
+                            {projects.map((_, i) => (
+                                <button key={i} onClick={() => setIndex(i)} className={`w-3 h-3 rounded-full ${i === index ? 'bg-blue-500' : 'bg-gray-300/40'}`}></button>
                             ))}
-                        </div>
-                        <div className="relative mb-4">
-                            <ImageCarousel images={podcastImages}/>
-                        </div>
-                        <div className="flex justify-between items-center">
-                            <a 
-                                href="https://github.com/Bigmonterss/2024-podcast-library-groupproject" 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className="text-blue-400 hover:text-blue-300 transition-colours"
-                            >   
-                                View Project ➜
-                            </a>
-                        </div>
-                    </div>
-
-                    <div className="p-6 rounded-xl border hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.2)]"
-                        style={{ borderColor: 'var(--border-color)' }}
-                    >
-                        <h3 className="text-xl font-bold mb-2">Concert Booking Web Service</h3>
-                        <p className="mb-4" style={{ color: "var(--text-color)" }}>
-                            Given a fully styled frontend and other relevant code, our backend work focused on implementing a RESTful web service for browsing concerts, checking seat availability, and making secure reservations with authentication and real-time sell-out alerts. This was a group project.
-                        </p>
-                        <div className="mb-4">
-                            {["Java", "SQL", "XML", "Git"].map((tech, key) => (
-                                <span key={key} className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20
-                                                hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.1)] transition-all"
-                                >
-                                    {tech}
-                                </span>
-                            ))}
-                        </div>
-                         <div className="relative">
-                            <ImageCarousel images={concertImages}/>
-                        </div>
-                    </div>
-
-                    <div className="p-6 rounded-xl border hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.2)]"
-                        style={{ borderColor: 'var(--border-color)' }}
-                    >
-                        <h3 className="text-xl font-bold mb-2">High-Fidelity Prototype</h3>
-                        <p className="mb-4" style={{ color: "var(--text-color)" }}>
-                            High-fidelity prototype of a pet-sitting service website featuring a landing page and user registration form. Focused on visual design, accessibility for users, and brand colour consistency derived from a custom HSL value. Includes layout based on Gestalt principles, semantic structure, and user-friendly form elements.
-                        </p>
-                        <div className="mb-4">
-                            {["UX/UI", "Figma"].map((tech, key) => (
-                                <span key={key} className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20
-                                                hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.1)] transition-all"
-                                >
-                                    {tech}
-                                </span>
-                            ))}
-                        </div>
-                        <div className="relative mb-4">
-                            <ImageCarousel images={prototypeImages}/>
-                        </div>
-                        <div className="flex justify-between items-center">
-                            <a href="https://www.figma.com/design/NPadKXRe7nwKTqYZb9xH0Y/Hi-Fidelity-Prototype-COMPSCI-345?node-id=34-230&t=RfbLftyNpM6TEAcr-1" 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className="text-blue-400 hover:text-blue-300 transition-colours"
-                            >  
-                                View Project ➜
-                            </a>
-                        </div>
-                    </div>
-
-                    {/* Capstone */}
-                    <div className="p-6 rounded-xl border hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.2)]"
-                        style={{ borderColor: 'var(--border-color)' }}
-                    >
-                        <h3 className="text-xl font-bold mb-2">Capstone Project - BearLingo</h3>
-                        <p className="mb-4" style={{ color: "var(--text-color)" }}>
-                            An AI cross-platform job-seeking and career progression/learning application inspired by Duolingo. My responsibilities included building the frontend with a modular, 
-                            component-based design, and integrating Firebase for authentication and real-time database features. Delivering biweekly progress updates and live demos to the client.
-                        </p>
-                        <div className="mb-4">
-                            {["Flutter", "Dart", "Firebase", "OpenAI", "Git"].map((tech, key) => (
-                                <span key={key} className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20
-                                                hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.1)] transition-all"
-                                >
-                                    {tech}
-                                </span>
-                            ))}
-                        </div>
-
-                        <div className="relative mb-4">
-                            <ImageCarousel images={bearlingoImages}/>
-                        </div>
-
-                        <div className="flex justify-between items-center">
-                            {/* for later */}
-                            <a href="https://github.com/uoa-compsci399-s2-2025/capstone-project-s2-2025-team-14.git" 
-                                target="_blank"
-                                rel="noopener norefferer"
-                                className="text-blue-400 hover:text-blue-300 transition-colours my-4">
-                                View Project ➜
-                            </a>
                         </div>
                     </div>
                 </div>
-            </div>
             </RevealOnScroll>
         </section>
     );
