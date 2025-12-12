@@ -34,7 +34,7 @@ export const Navbar = ({menuOpen, setMenuOpen, isDark, toggleTheme}) => {
                     <Link to="/self-portfolio-project-2025/about" className="hover:text-blue-500 transition"> About </Link>
                     <HashLink smooth to="/self-portfolio-project-2025/#projects" className="hover:text-blue-500 transition"> Projects </HashLink>
                     <HashLink smooth to="/self-portfolio-project-2025/#contact" className="hover:text-blue-500 transition"> Contact </HashLink>
-                    <Link to="/self-portfolio-project-2025/wip" className="hover:text-blue-500 transition"> WIP </Link>
+                    <Link to="/self-portfolio-project-2025/life" className="hover:text-blue-500 transition"> Life </Link>
                     
 
                     {/* Theme toggle */}

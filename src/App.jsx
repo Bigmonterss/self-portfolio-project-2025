@@ -7,7 +7,7 @@ import { Home } from "./components/sections/Home";
 import { About } from "./components/sections/About";
 import { Projects } from "./components/sections/Projects";
 import { Contact } from "./components/sections/Contact";
-import { Wip } from "./components/sections/WIP";
+import { Life } from "./components/sections/Life";
 import { AnimCursor } from "./components/AnimCursor";
 import { Footer } from "./components/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -76,10 +76,10 @@ function App() {
 
         {/* WORK IN PROGRESS PAGE */}
         <Route
-          path="/self-portfolio-project-2025/wip"
+          path="/self-portfolio-project-2025/life"
           element={
             <>
-              <Wip />
+              <Life />
               <Footer />
             </>
           }

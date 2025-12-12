@@ -71,7 +71,7 @@ export const Home = () => {
                     </a>
                 </div>
                 <Link 
-                    to="/about" 
+                    to="/self-portfolio-project-2025/about" 
                     className="text-m flex justify-center py-3 hover:text-blue-500 transition" style={{ color: 'var(--text-color)' }}>
                     Learn more about me
                 </Link>
