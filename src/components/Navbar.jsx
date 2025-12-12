@@ -1,6 +1,5 @@
 import { useEffect } from "react"
 import { MdDarkMode, MdLightMode } from "react-icons/md";
-import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 export const Navbar = ({menuOpen, setMenuOpen, isDark, toggleTheme}) => {
@@ -13,13 +12,11 @@ export const Navbar = ({menuOpen, setMenuOpen, isDark, toggleTheme}) => {
     return <nav className="fixed top-0 w-full z-40 bg-[rgba(10, 10, 10, 0.8)] backdrop-blur-lg border-b border-white/10 shadow-sm">
         <div className="max-w-5xl mx-auto px-4">
             <div className="flex justify-between items-center h-16">
-                <a
-                    href="#home"
-                    className="font-mono text-xl font-bold transition-all hover:scale-110"
-                    style={{ color: isDark ? 'white' : 'black' }}
-                    >
+                <HashLink smooth to="/#home" className="font-mono text-xl font-bold transition-all hover:scale-110"
+                    style={{ color: isDark ? 'white' : 'black' }}>
                     {text}
-                </a>
+                </HashLink>
+
 
                 <div 
                     className ="w-7 h-7 relative cursor-pointer z-40 md:hidden text-xl" 
@@ -30,11 +27,23 @@ export const Navbar = ({menuOpen, setMenuOpen, isDark, toggleTheme}) => {
                 
                 {/* Navigation links */}
                 <div className="hidden md:flex items-center space-x-6">
-                    <HashLink smooth to="/self-portfolio-project-2025/#home" className="hover:text-blue-500 transition"> Home </HashLink>
-                    <Link to="/self-portfolio-project-2025/about" className="hover:text-blue-500 transition"> About </Link>
-                    <HashLink smooth to="/self-portfolio-project-2025/#projects" className="hover:text-blue-500 transition"> Projects </HashLink>
-                    <HashLink smooth to="/self-portfolio-project-2025/#contact" className="hover:text-blue-500 transition"> Contact </HashLink>
-                    <Link to="/self-portfolio-project-2025/life" className="hover:text-blue-500 transition"> Life </Link>
+                    <HashLink smooth to="/#home" className="hover:text-blue-500 transition">
+                        Home
+                    </HashLink>
+                    <HashLink smooth to="/about" className="hover:text-blue-500 transition">
+                        About
+                    </HashLink>
+                    <HashLink smooth to="/#projects" className="hover:text-blue-500 transition">
+                        Projects
+                    </HashLink>
+                    <HashLink smooth to="/#contact" className="hover:text-blue-500 transition">
+                        Contact
+                    </HashLink>
+                    
+                    <HashLink smooth to="/gallery" className="hover:text-blue-500 transition">
+                        Gallery
+                    </HashLink>
+
                     
 
                     {/* Theme toggle */}

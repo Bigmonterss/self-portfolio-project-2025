@@ -17,23 +17,23 @@ export const MobileMenu = ({menuOpen, setMenuOpen, isDark, toggleTheme}) => {
             &times;
             </button>
             <HashLink 
-                smooth to="/self-portfolio-project-2025/#home" 
+                smooth to="/#home"
                 onClick={() => setMenuOpen(false)} 
                 className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300 
                         ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
             > 
                 Home 
             </HashLink>
-            <Link 
-                to="/self-portfolio-project-2025/about" 
+            <HashLink 
+                smooth to="/about"
                 onClick={() => setMenuOpen(false)} 
                 className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300 
                         ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
             > 
                 About 
-            </Link>
+            </HashLink>
             <HashLink 
-                smooth to="/self-portfolio-project-2025/#projects" 
+                smooth to="/#projects"
                 onClick={() => setMenuOpen(false)}
                 className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300 
                         ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
@@ -41,7 +41,7 @@ export const MobileMenu = ({menuOpen, setMenuOpen, isDark, toggleTheme}) => {
                 Projects 
             </HashLink>
             <HashLink 
-                smooth to="/self-portfolio-project-2025/#contact" 
+                smooth to="/#contact"
                 onClick={() => setMenuOpen(false)} 
                 className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300 
                         ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
@@ -49,14 +49,14 @@ export const MobileMenu = ({menuOpen, setMenuOpen, isDark, toggleTheme}) => {
                 Contact 
             </HashLink>
 
-            <Link 
-                to="/self-portfolio-project-2025/life" 
+            <HashLink 
+                smooth to="/gallery"
                 onClick={() => setMenuOpen(false)} 
                 className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300 
                         ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
             > 
-                Life 
-            </Link>
+                Gallery 
+            </HashLink>
 
             {/* Theme control for mobile menu */}        
             <div className={`mt-2 flex items-center gap-3 transition-all duration-300

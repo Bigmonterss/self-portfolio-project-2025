@@ -36,7 +36,7 @@ import mercerBay7 from '../../assets/images/mercer/mercer7.jpg';
 
 
 
-export const Life = () => {
+export const Gallery = () => {
   const [dropdowns, setDropdowns] = useState({
     Vietnam: false,
     W2E: false,
@@ -59,11 +59,11 @@ export const Life = () => {
   };
 
   return (
-    <section id="life" className="min-h-screen w-full py-40">
+    <section id="gallery" className="min-h-screen w-full py-40">
       <RevealOnScroll>
-        <div className="max-w-5xl mx-auto px-4">
+        <div className="max-w-5xl mx-auto px-4 py-20">
           <h2 className="text-3xl mb-3 font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent text-center">
-            Activities & Photos
+            My Gallery
           </h2>
           <p className="text-lg flex justify-center mb-8" style={{ color: 'var(--text-color)' }}>Some highlighted activities I've done!</p>
 

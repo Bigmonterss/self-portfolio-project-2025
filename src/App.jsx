@@ -7,10 +7,10 @@ import { Home } from "./components/sections/Home";
 import { About } from "./components/sections/About";
 import { Projects } from "./components/sections/Projects";
 import { Contact } from "./components/sections/Contact";
-import { Life } from "./components/sections/Life";
+import { Gallery } from "./components/sections/Gallery";
 import { AnimCursor } from "./components/AnimCursor";
 import { Footer } from "./components/Footer";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 import "./index.css";
 
@@ -35,7 +35,7 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <AnimCursor />
       <Navbar 
         menuOpen={menuOpen} 
@@ -49,10 +49,10 @@ function App() {
         isDark={isDark} 
         toggleTheme={toggleTheme} 
       />
+
       <Routes>
-        {/* MAIN PAGE (Home + Projects + Contact) */}
         <Route
-          path="/self-portfolio-project-2025"
+          path="/"
           element={
             <>
               <Home />
@@ -63,30 +63,27 @@ function App() {
           }
         />
 
-        {/* ABOUT PAGE */}
         <Route
-          path="/self-portfolio-project-2025/about"
+          path="/about"
           element={
             <>
-              <About />
+              <Gallery />
               <Footer />
             </>
           }
         />
 
-        {/* WORK IN PROGRESS PAGE */}
         <Route
-          path="/self-portfolio-project-2025/life"
+          path="/gallery"
           element={
             <>
-              <Life />
+              <Gallery />
               <Footer />
             </>
           }
         />
       </Routes>
-      
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
