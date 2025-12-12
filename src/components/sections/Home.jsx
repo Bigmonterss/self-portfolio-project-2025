@@ -1,6 +1,8 @@
 import { RevealOnScroll } from "../RevealOnScroll";
 import JumpNotification from "../JumpNotification";
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
+
 
 export const Home = () => {
     const sentences = [
@@ -41,12 +43,12 @@ export const Home = () => {
             {/* Foreground content */}
             
             <div>
-                <h1 className="text-center text-5xl md:text-7xl font-bold mb-2 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent leading-right"> 
+                <h1 className="text-center text-5xl md:text-7xl font-bold mb-3 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent leading-right"> 
                     Hi, I'm Jayden Pham.
                 </h1>
 
                 <p
-                    className={`text-center text-lg mb-8 max-w-lg mx-auto flex justify-center transition-opacity duration-300`}
+                    className={`text-center text-lg mb-12 max-w-lg mx-auto flex justify-center transition-opacity duration-300`}
                     style={{
                         color: "var(--text-color)",
                         opacity: visible ? 1 : 0,
@@ -67,6 +69,11 @@ export const Home = () => {
                         Contact Me
                     </a>
                 </div>
+                <Link 
+                    to="/about" 
+                    className="text-m flex justify-center py-3 hover:text-blue-500 transition">
+                    Learn more about me
+                </Link>
             </div>
             <JumpNotification />
         </section>

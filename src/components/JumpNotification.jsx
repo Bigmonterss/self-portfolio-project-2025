@@ -9,7 +9,7 @@ export default function JumpNotification() {
       aria-label="Scroll down"
     >
       <span className="jump-text">Scroll down</span>
-      <span className="jump-arrow" aria-hidden><RiScrollToBottomFill size={20}/></span>
+      <span className="jump-arrow" aria-hidden><RiScrollToBottomFill size={18}/></span>
     </div>
   );
 }
