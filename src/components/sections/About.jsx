@@ -16,7 +16,7 @@ export const About = () => {
     const tools = ["Git/GitHub", "Jira", "Figma", "Microsoft 365"]
 
     return (
-        <section id="about" className="flex items-center justify-center py-10">
+        <section id="about" className="flex items-center justify-center py-20">
             <RevealOnScroll>
             <div className="max-w-3xl mx-auto px-4 py-30">
                 <div className='flex justify-center mb-4'>
