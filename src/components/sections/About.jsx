@@ -7,6 +7,7 @@ import aussIcon from '../../assets/images/experience/auss/auss.jpg'
 import calisthenicsPoster from '../../assets/images/experience/auss/calisthenics.jpg'
 import duosnightPoster from '../../assets/images/experience/auss/1750676684574.jpg'
 import mhsLogo from '../../assets/images/mhslogo.jpg';
+import cv from '../../assets/JaydenPhamCV.pdf';
 
 
 export const About = () => {
@@ -30,7 +31,7 @@ export const About = () => {
                     About Me
                 </h2>
 
-                <div className="flex justify-center mb-4 gap-3">
+                <div className="flex justify-center mb-2 gap-3">
                     <a 
                         href="https://www.linkedin.com/in/jayden-pham-6043812b5/" 
                         target="_blank" 
@@ -56,6 +57,9 @@ export const About = () => {
                         <FaInstagram size={30} />
                     </a>
                 </div>
+
+                {/* CV Download Link */}
+                <a href={cv} download="JaydenPhamCV.pdf" className="flex justify-center mb-4 text-blue-500 hover:underline">Download my CV</a>
             
 
                 {/* Small intro about me section*/}
