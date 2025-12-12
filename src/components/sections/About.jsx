@@ -38,7 +38,7 @@ export const About = () => {
                         rel="noopener noreferrer"
                         className="hover:-translate-y-0.5 transition-all hover:text-blue-500"
                     >
-                        <FaLinkedin size={30} />
+                        <FaLinkedin size={30} style={{ color: 'var(--text-color)' }} />
                     </a>
                     <a 
                         href="https://github.com/Bigmonterss" 
@@ -46,7 +46,7 @@ export const About = () => {
                         rel="noopener noreferrer"
                         className="hover:-translate-y-0.5 transition-all hover:text-blue-500"
                     >
-                        <FaGithub size={30} />
+                        <FaGithub size={30} style={{ color: 'var(--text-color)' }} />
                     </a>
                     <a 
                         href="https://www.instagram.com/bigmonters/" 
@@ -54,7 +54,7 @@ export const About = () => {
                         rel="noopener noreferrer"
                         className="hover:-translate-y-0.5 transition-all hover:text-blue-500"
                     >
-                        <FaInstagram size={30} />
+                        <FaInstagram size={30} style={{ color: 'var(--text-color)' }}/>
                     </a>
                 </div>
 
@@ -76,7 +76,7 @@ export const About = () => {
                     {/*Frontend and Backend skills section*/}
                     <div className="grid grid-col-1 md:grid-cols-2 gap-6">
                         <div className="rounded-xl p-6 hover:-translate-y-1 transition all">
-                            <h3 className="text-xl font-bold mb-4"> Frontend </h3>
+                            <h3 className="text-xl font-bold mb-4" style={{ color: 'var(--text-color)' }}> Frontend </h3>
                             <div className="flex flex-wrap gap-2">
                                 {frontendSkills.map((tech, key) => (
                                     <span key={key} className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20
@@ -89,7 +89,7 @@ export const About = () => {
                         </div>
 
                         <div className="rounded-xl p-6 hover:-translate-y-1 transition all">
-                            <h3 className="text-xl font-bold mb-4"> Backend </h3>
+                            <h3 className="text-xl font-bold mb-4" style={{ color: 'var(--text-color)' }}> Backend </h3>
                             <div className="flex flex-wrap gap-2">
                                 {backendSkills.map((tech, key) => (
                                     <span key={key} className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20
@@ -104,7 +104,7 @@ export const About = () => {
 
                     {/*Tools section*/}
                     <div className="rounded-xl p-6 hover:-translate-y-1 transition all">
-                            <h3 className="text-xl font-bold mb-4"> Tools </h3>
+                            <h3 className="text-xl font-bold mb-4" style={{ color: 'var(--text-color)' }}> Tools </h3>
                             <div className="flex flex-wrap gap-2">
                                 {tools.map((tech, key) => (
                                     <span key={key} className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20
@@ -122,7 +122,7 @@ export const About = () => {
                     <div className="rounded-xl p-8 border hover:-translate-y-1 transition-all"
                         style={{ borderColor: 'var(--border-color)' }}
                     >
-                        <h3 className="text-xl font-bold mb-4">Education</h3>
+                        <h3 className="text-xl font-bold mb-4" style={{ color: 'var(--text-color)' }}>Education</h3>
                         <div>
                             <ExperienceItem
                                 title="University of Auckland"
@@ -167,7 +167,7 @@ export const About = () => {
                     <div className="rounded-xl p-8 border hover:-translate-y-1 transition-all"
                         style={{ borderColor: 'var(--border-color)' }}
                     >
-                        <h3 className="text-xl font-bold mb-4">Experience</h3>
+                        <h3 className="text-xl font-bold mb-4" style={{ color: 'var(--text-color)' }}>Experience</h3>
                         <div>
                             <ExperienceItem
                                 title="Auckland University Strength Society"

@@ -38,7 +38,7 @@ export const Projects = () => {
                                 {projects.map((p, i) => (
                                     <div key={i} className="w-full flex-shrink-0 px-2">
                                         <div className="p-5 rounded-xl border w-full max-w-sm md:max-w-2xl mx-auto" style={{ borderColor: 'var(--border-color)' }}>
-                                            <h3 className="text-xl font-bold mb-2">{p.title}</h3>
+                                            <h3 className="text-xl font-bold mb-2" style={{ color: 'var(--text-color)' }}>{p.title}</h3>
                                             <p className="mb-4" style={{ color: 'var(--text-color)' }}>{p.desc}</p>
                                             <div className="mb-4">
                                                 {p.tech.map((t, k) => (

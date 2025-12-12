@@ -26,7 +26,7 @@ export const ExperienceItem = ({ title, role, date, children, icon }) => {
               </div>
             )}
             <div>
-              <div className="flex items-center gap-2 font-semibold text-base">
+              <div className="flex items-center gap-2 font-semibold text-base" style={{ color: 'var(--text-color)' }}>
                 {title}
                 {isOpen ? (
                   <IoChevronUp className="text-blue-500 text-lg" />
