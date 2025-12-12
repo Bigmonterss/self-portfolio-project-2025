@@ -25,13 +25,13 @@ export const Contact = () => {
     };
 
     return (
-        <section id="contact" className="min-h-screen flex items-center justify-center py-20">
+        <section id="contact" className="min-h-screen flex items-center justify-center py-100">
             <RevealOnScroll>
                 <div className="mx-auto px-4" style={{ maxWidth: '600px', width: '90vw' }}>
                     <h2 className="text-3xl font-bold mb-2 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent text-center">
                         Contact Me.
                     </h2>
-                    <p className ="text-center text-gray-400 text-lg mb-8 max-w-lg mx-auto">
+                    <p className ="text-center  text-lg mb-8 max-w-lg mx-auto" style={{ color: 'var(--text-color)' }}>
                         Let's Connect! Fill out the form below, or drop me a{' '}
                         <a
                             href="https://www.linkedin.com/in/jayden-pham-6043812b5/" 
@@ -44,7 +44,7 @@ export const Contact = () => {
                     </p>
                     <form className="space-y-6" onSubmit={handleSubmit}>
                         <div className="relative">
-                            <p className="text-gray-400 text-lg mb-2">Name</p>
+                            <p className="text-lg mb-2" style={{ color: 'var(--text-color)' }}>Name</p>
                             <input 
                                 type="text" 
                                 id="name" 
@@ -58,7 +58,7 @@ export const Contact = () => {
                             />
                         </div>
                         <div className="relative">
-                            <p className="text-gray-400 text-lg mb-2">Email</p>
+                            <p className="text-lg mb-2" style={{ color: 'var(--text-color)' }}>Email</p>
                             <input 
                                 type="email" 
                                 id="email" 
@@ -72,7 +72,7 @@ export const Contact = () => {
                             />
                         </div>
                         <div className="relative">
-                            <p className="text-gray-400 text-lg mb-2">Message</p>
+                            <p className="ext-lg mb-2" style={{ color: 'var(--text-color)' }}>Message</p>
                             <textarea 
                                 id="message" 
                                 name="message" 

@@ -7,9 +7,11 @@ import { Home } from "./components/sections/Home";
 import { About } from "./components/sections/About";
 import { Projects } from "./components/sections/Projects";
 import { Contact } from "./components/sections/Contact";
+import { Wip } from "./components/sections/WIP";
 import { AnimCursor } from "./components/AnimCursor";
 import { Footer } from "./components/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import "./index.css";
 
 function App() {
@@ -63,10 +65,21 @@ function App() {
 
         {/* ABOUT PAGE */}
         <Route
-          path="/about"
+          path="/self-portfolio-project-2025/about"
           element={
             <>
               <About />
+              <Footer />
+            </>
+          }
+        />
+
+        {/* WORK IN PROGRESS PAGE */}
+        <Route
+          path="/self-portfolio-project-2025/wip"
+          element={
+            <>
+              <Wip />
               <Footer />
             </>
           }

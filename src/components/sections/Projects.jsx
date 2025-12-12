@@ -27,11 +27,11 @@ export const Projects = () => {
     }, []);
 
     return (
-        <section id="projects" className="min-h-screen flex items-center justify-center py-20">
+        <section id="projects" className="min-h-screen flex items-center justify-center py-100">
             <RevealOnScroll>
                 <div className="max-w-5xl mx-auto px-4">
-                    <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent text-center">Featured Projects</h2>
-                    <p className="flex justify-center mb-8">A showcase of projects I have contirbuted in.</p>
+                    <h2 className="text-3xl mb-2 font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent text-center">Featured Projects</h2>
+                    <p className="text-lg flex justify-center mb-8" style={{ color: 'var(--text-color)' }}>A showcase of projects I have contirbuted in.</p>
                     <div className="relative">
                         <div className="overflow-hidden">
                             <div className="flex transition-transform duration-500" style={{ transform: `translateX(-${index * 100}%)` }}>

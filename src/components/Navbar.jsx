@@ -30,10 +30,12 @@ export const Navbar = ({menuOpen, setMenuOpen, isDark, toggleTheme}) => {
                 
                 {/* Navigation links */}
                 <div className="hidden md:flex items-center space-x-6">
-                    <HashLink smooth to="/self-portfolio-project-2025#home" className="hover:text-blue-500 transition"> Home </HashLink>
-                    <Link to="/about" className="hover:text-blue-500 transition"> About </Link>
-                    <HashLink smooth to="/self-portfolio-project-2025#projects" className="hover:text-blue-500 transition"> Projects </HashLink>
-                    <HashLink smooth to="/self-portfolio-project-2025#contact" className="hover:text-blue-500 transition"> Contact </HashLink>
+                    <HashLink smooth to="/self-portfolio-project-2025/#home" className="hover:text-blue-500 transition"> Home </HashLink>
+                    <Link to="/self-portfolio-project-2025/about" className="hover:text-blue-500 transition"> About </Link>
+                    <HashLink smooth to="/self-portfolio-project-2025/#projects" className="hover:text-blue-500 transition"> Projects </HashLink>
+                    <HashLink smooth to="/self-portfolio-project-2025/#contact" className="hover:text-blue-500 transition"> Contact </HashLink>
+                    <Link to="/self-portfolio-project-2025/wip" className="hover:text-blue-500 transition"> WIP </Link>
+                    
 
                     {/* Theme toggle */}
                     <button
