@@ -6,9 +6,9 @@ import { FaLongArrowAltLeft, FaLongArrowAltRight } from 'react-icons/fa';
 export const Projects = () => {
     const projects = [
         { title: 'Podcast Library', desc: 'A full-stack group project where we had to create a podcast library web app where you are able to add, remove and browse for podcasts. It features a user authentication system, as well as using a database to store all podcasts, ratings, playlists, and login credentials.', tech: ['Python','Flask','HTML','CSS','Git'], images: podcastImages, link: 'https://github.com/Bigmonterss/2024-podcast-library-groupproject' },
-        { title: 'Concert Booking', desc: 'Given a fully styled frontend and other relevant code, our backend work focused on implementing a RESTful web service for browsing concerts, checking seat availability, and making secure reservations with authentication and real-time sell-out alerts. This was a group project.', tech: ['Java','SQL','XML'], images: concertImages, link: '#' },
-        { title: 'High-Fidelity Prototype', desc: 'High-fidelity prototype of a pet-sitting service website featuring a landing page and user registration form. Focused on visual design, accessibility for users, and brand colour consistency derived from a custom HSL value. Includes layout based on Gestalt principles, semantic structure, and user-friendly form elements.', tech: ['UX/UI','Figma'], images: prototypeImages, link: 'https://www.figma.com' },
-        { title: 'Capstone - BearLingo', desc: 'An AI cross-platform job-seeking and career progression/learning application inspired by Duolingo. My responsibilities included building the frontend with a modular, component-based design, and integrating Firebase for authentication and real-time database features. Delivering biweekly progress updates and live demos to the client.', tech: ['Flutter','Dart','Firebase','OpenAI','Git'], images: bearlingoImages, link: 'https://github.com/uoa-compsci399-s2-2025/capstone-project-s2-2025-team-14.git' }
+        { title: 'Concert Booking', desc: 'Given a fully styled frontend and other relevant code, our backend work focused on implementing a RESTful web service for browsing concerts, checking seat availability, and making secure reservations with authentication and real-time sell-out alerts.', tech: ['Java','SQL','XML'], images: concertImages, link: '#' },
+        { title: 'High-Fidelity Prototype', desc: 'High-fidelity prototype of a pet-sitting service website featuring a landing page and user registration form. Focused on visual design, accessibility, and brand colour consistency. Based on Gestalt principles, semantic structure, and user-friendly form elements.', tech: ['UX/UI','Figma'], images: prototypeImages, link: 'https://www.figma.com' },
+        { title: 'Capstone - BearLingo', desc: 'An AI cross-platform job-seeking and career progression/learning application inspired by Duolingo. With a modular, component-based design, and integrating authentication and real-time database features. Delivering biweekly progress updates and live demos to the client.', tech: ['Flutter','Dart','Firebase','OpenAI','Git'], images: bearlingoImages, link: 'https://github.com/uoa-compsci399-s2-2025/capstone-project-s2-2025-team-14.git' }
     ];
 
     const [index, setIndex] = useState(0);
@@ -16,7 +16,7 @@ export const Projects = () => {
     const prev = () => setIndex((i) => (i - 1 + projects.length) % projects.length);
     const next = () => setIndex((i) => (i + 1) % projects.length);
 
-    // keyboard support for project navigation
+    // keyboard support
     useEffect(() => {
         const onKey = (e) => {
             if (e.key === 'ArrowLeft') prev();
@@ -31,7 +31,7 @@ export const Projects = () => {
             <RevealOnScroll>
                 <div className="max-w-5xl mx-auto px-4">
                     <h2 className="text-3xl mb-2 font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent text-center">Featured Projects</h2>
-                    <p className="text-lg flex justify-center mb-8" style={{ color: 'var(--text-color)' }}>A showcase of projects I have contirbuted in.</p>
+                    <p className="text-lg flex justify-center mb-8" style={{ color: 'var(--text-color)' }}>A showcase of projects I have contributed in.</p>
                     <div className="relative">
                         <div className="overflow-hidden">
                             <div className="flex transition-transform duration-500" style={{ transform: `translateX(-${index * 100}%)` }}>
@@ -55,38 +55,50 @@ export const Projects = () => {
                                             <div className="flex justify-between items-center">
                                                 <a href={p.link} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors">View Project ➜</a>
                                             </div>
+
+                                            {/* Mobile arrows below card */}
+                                            <div className="flex justify-between mt-4 md:hidden">
+                                                <button
+                                                    aria-label="Previous project"
+                                                    onClick={prev}
+                                                    style={{ backgroundColor: "var(--theme-toggle-bg)", border: "1px solid var(--border-color)", color: "var(--color)" }}
+                                                    className="p-3 rounded-full shadow hover:opacity-90 transition"
+                                                >
+                                                    <FaLongArrowAltLeft size={18} />
+                                                </button>
+                                                <button
+                                                    aria-label="Next project"
+                                                    onClick={next}
+                                                    style={{ backgroundColor: "var(--theme-toggle-bg)", border: "1px solid var(--border-color)", color: "var(--color)" }}
+                                                    className="p-3 rounded-full shadow hover:opacity-90 transition"
+                                                >
+                                                    <FaLongArrowAltRight size={18} />
+                                                </button>
+                                            </div>
+
                                         </div>
                                     </div>
                                 ))}
                             </div>
                         </div>
 
+                        {/* Desktop arrows on sides */}
                         <button
                             aria-label="Previous project"
                             onClick={prev}
-                            style={{
-                                backgroundColor: "var(--theme-toggle-bg)",   // white in light, black in dark
-                                border: "1px solid var(--border-color)",     // gray outline
-                                color: "var(--color)",                       // arrow color
-                            }}
-                            className="absolute left-4 md:left-20 top-1/2 transform -translate-y-1/2 p-4 rounded-full shadow-lg z-20 hover:opacity-90 transition"
-                            >
+                            style={{ backgroundColor: "var(--theme-toggle-bg)", border: "1px solid var(--border-color)", color: "var(--color)" }}
+                            className="hidden md:flex absolute left-4 top-1/2 transform -translate-y-1/2 p-4 rounded-full shadow-lg z-20 hover:opacity-90 transition sm:left-4 md:left-6 lg:left-20"
+                        >
                             <FaLongArrowAltLeft size={20} />
-                            </button>
-
-                            <button
+                        </button>
+                        <button
                             aria-label="Next project"
                             onClick={next}
-                            style={{
-                                backgroundColor: "var(--theme-toggle-bg)",
-                                border: "1px solid var(--border-color)",
-                                color: "var(--color)",
-                            }}
-                            className="absolute right-4 md:right-20 top-1/2 transform -translate-y-1/2 p-4 rounded-full shadow-lg z-20 hover:opacity-90 transition"
-                            >
+                            style={{ backgroundColor: "var(--theme-toggle-bg)", border: "1px solid var(--border-color)", color: "var(--color)" }}
+                            className="hidden md:flex absolute right-4 top-1/2 transform -translate-y-1/2 p-4 rounded-full shadow-lg z-20 hover:opacity-90 transition sm:right-4 md:right-6 lg:right-20"
+                        >
                             <FaLongArrowAltRight size={20} />
-                            </button>
-
+                        </button>
 
                         <div className="flex justify-center gap-2 mt-6">
                             {projects.map((_, i) => (
@@ -98,4 +110,4 @@ export const Projects = () => {
             </RevealOnScroll>
         </section>
     );
-}
+};
