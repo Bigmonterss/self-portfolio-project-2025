@@ -1,4 +1,6 @@
 import { MdDarkMode, MdLightMode } from "react-icons/md";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 export const MobileMenu = ({menuOpen, setMenuOpen, isDark, toggleTheme}) => {
 
@@ -14,38 +16,38 @@ export const MobileMenu = ({menuOpen, setMenuOpen, isDark, toggleTheme}) => {
             >
             &times;
             </button>
-            <a 
-                href="#home" 
+            <HashLink 
+                smooth to="/#home" 
                 onClick={() => setMenuOpen(false)} 
                 className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300 
                         ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
             > 
                 Home 
-            </a>
-            <a 
-                href="#about" 
+            </HashLink>
+            <Link 
+                to="/about" 
                 onClick={() => setMenuOpen(false)} 
                 className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300 
                         ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
             > 
                 About 
-            </a>
-            <a 
-                href="#projects" 
+            </Link>
+            <HashLink 
+                smooth to="/#projects" 
                 onClick={() => setMenuOpen(false)}
                 className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300 
                         ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
             > 
                 Projects 
-            </a>
-            <a 
-                href="#contact" 
+            </HashLink>
+            <HashLink 
+                smooth to="/#contact" 
                 onClick={() => setMenuOpen(false)} 
                 className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300 
                         ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
             > 
                 Contact 
-            </a>
+            </HashLink>
 
             {/* Theme control for mobile menu */}        
             <div className={`mt-2 flex items-center gap-3 transition-all duration-300

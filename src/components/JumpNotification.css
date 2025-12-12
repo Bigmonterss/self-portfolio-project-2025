@@ -1,0 +1,59 @@
+.jump-notification {
+  position: absolute;
+  left: 50%;
+  bottom: 100px;
+  transform: translateX(-50%) translateY(0);
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  background: rgba(59, 130, 246, 0.08);
+  color: rgb(37, 99, 235);
+  border: 1px solid rgba(59, 130, 246, 0.10);
+  padding: 8px 14px;
+  border-radius: 9999px;
+  font-weight: 550;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 8px 18px rgba(2,6,23,0.05);
+  animation: jump 1.25s cubic-bezier(.28,.84,.42,1) infinite;
+  /* keep below the navbar (navbar uses z-40) so it doesn't cover it */
+  z-index: 20;
+}
+
+.jump-notification:active {
+  transform: translateX(-50%) translateY(-2px);
+  transition: transform 120ms;
+}
+
+.jump-text {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.jump-arrow {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1;
+  transform-origin: center;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .jump-notification {
+    bottom: 28px;
+    padding: 6px 10px;
+  }
+  .jump-text { font-size: 13px; }
+  .jump-arrow { font-size: 14px; }
+}

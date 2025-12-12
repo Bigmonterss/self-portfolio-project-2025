@@ -7,15 +7,15 @@ import { Home } from "./components/sections/Home";
 import { About } from "./components/sections/About";
 import { Projects } from "./components/sections/Projects";
 import { Contact } from "./components/sections/Contact";
-import { AnimCursor }from "./components/AnimCursor";
+import { AnimCursor } from "./components/AnimCursor";
 import { Footer } from "./components/Footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
-
-  // Theme lifted to App so Navbar and MobileMenu share it
   const [isDark, setIsDark] = useState(false);
+
   useEffect(() => {
     const saved = localStorage.getItem("theme");
     const dark = saved === "dark";
@@ -33,25 +33,48 @@ function App() {
   };
 
   return (
-    <>
-     {/*
-      {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}{" "}
-      <div 
-        className={`min-h-screen transition-opacity duration-700 ${
-          isLoaded ? "opacity-100" : "opacity-0"
-          } bg-black text-gray-100`}
-      > </div> */}
-      
-      <AnimCursor/>
-      <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} isDark={isDark} toggleTheme={toggleTheme}/>
-      <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} isDark={isDark} toggleTheme={toggleTheme}/>
-      <Home/>
-      <About/>
-      <Projects/>
-      <Contact/>
-      <Footer/>
-    </>
-  )
+    <BrowserRouter>
+      <AnimCursor />
+      <Navbar 
+        menuOpen={menuOpen} 
+        setMenuOpen={setMenuOpen} 
+        isDark={isDark} 
+        toggleTheme={toggleTheme} 
+      />
+      <MobileMenu 
+        menuOpen={menuOpen} 
+        setMenuOpen={setMenuOpen} 
+        isDark={isDark} 
+        toggleTheme={toggleTheme} 
+      />
+
+      <Routes>
+        {/* MAIN PAGE (Home + Projects + Contact) */}
+        <Route
+          path="/"
+          element={
+            <>
+              <Home />
+              <Projects />
+              <Contact />
+              <Footer />
+            </>
+          }
+        />
+
+        {/* ABOUT PAGE */}
+        <Route
+          path="/about"
+          element={
+            <>
+              <About />
+              <Footer />
+            </>
+          }
+        />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

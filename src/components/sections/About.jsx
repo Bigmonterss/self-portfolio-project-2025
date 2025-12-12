@@ -59,7 +59,7 @@ export const About = () => {
                 </div>
 
                 {/* CV Download Link */}
-                <a href={cv} download="JaydenPhamCV.pdf" className="flex justify-center mb-4 text-blue-500 hover:underline">Download my CV</a>
+                <a href={cv} download="JaydenPhamCV.pdf" className="flex justify-center mb-4 text-blue-500 hover:underline">Download CV</a>
             
 
                 {/* Small intro about me section*/}

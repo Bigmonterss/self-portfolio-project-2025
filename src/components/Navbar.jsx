@@ -1,5 +1,7 @@
 import { useEffect } from "react"
 import { MdDarkMode, MdLightMode } from "react-icons/md";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 export const Navbar = ({menuOpen, setMenuOpen, isDark, toggleTheme}) => {
     const text = "<Bigmonters/>"
@@ -25,12 +27,13 @@ export const Navbar = ({menuOpen, setMenuOpen, isDark, toggleTheme}) => {
                 >
                     &#9776;
                 </div>
-
+                
+                {/* Navigation links */}
                 <div className="hidden md:flex items-center space-x-6">
-                    <a href="#home" className="hover:text-blue-500 transition"> Home </a>
-                    <a href="#about" className="hover:text-blue-500 transition"> About </a>
-                    <a href="#projects" className="hover:text-blue-500 transition"> Projects </a>
-                    <a href="#contact" className="hover:text-blue-500 transition"> Contact </a>
+                    <HashLink smooth to="/#home" className="hover:text-blue-500 transition"> Home </HashLink>
+                    <Link to="/about" className="hover:text-blue-500 transition"> About </Link>
+                    <HashLink smooth to="/#projects" className="hover:text-blue-500 transition"> Projects </HashLink>
+                    <HashLink smooth to="/#contact" className="hover:text-blue-500 transition"> Contact </HashLink>
 
                     {/* Theme toggle */}
                     <button

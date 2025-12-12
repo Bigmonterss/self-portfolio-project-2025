@@ -1,4 +1,5 @@
 import { RevealOnScroll } from "../RevealOnScroll";
+import JumpNotification from "../JumpNotification";
 import { useEffect, useRef, useState } from "react";
 
 export const Home = () => {
@@ -32,12 +33,13 @@ export const Home = () => {
     }, []);
 
     return (
+        <RevealOnScroll>
         <section
             id="home"
             className="min-h-screen relative flex items-center justify-center"
         >
             {/* Foreground content */}
-            <RevealOnScroll>
+            
             <div>
                 <h1 className="text-center text-5xl md:text-7xl font-bold mb-2 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent leading-right"> 
                     Hi, I'm Jayden Pham.
@@ -66,7 +68,8 @@ export const Home = () => {
                     </a>
                 </div>
             </div>
-            </RevealOnScroll>
+            <JumpNotification />
         </section>
+        </RevealOnScroll>
     );
 }
