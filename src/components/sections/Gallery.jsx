@@ -3,6 +3,7 @@ import { RevealOnScroll } from "../RevealOnScroll";
 import ContinuousCarousel from "../ContinuousCarousel";
 import ImageModal from "../ImageModal";
 import { IoChevronDown, IoChevronUp } from "react-icons/io5";
+import { FaVideo } from "react-icons/fa";
 
 // Import images for w2e
 import danielKim from '../../assets/images/w2e/danielkim.png';
@@ -10,6 +11,13 @@ import theBoys from '../../assets/images/w2e/theboys.png';
 import w2eCrew1 from '../../assets/images/w2e/w2ecrew1.png';
 import w2eCrew2 from '../../assets/images/w2e/w2ecrew2.png';
 import yungKai1 from '../../assets/images/w2e/yungkai1.png';
+import loveVideo from '../../assets/images/w2e/videos/love.mp4';
+import badVideo from '../../assets/images/w2e/videos/bad.mp4';
+import annieVideo from '../../assets/images/w2e/videos/annie.mp4';
+import peacheyesVideo from '../../assets/images/w2e/videos/peacheyes.mp4';
+import seasonsVideo from '../../assets/images/w2e/videos/seasons.mp4';
+import howdoyoudanceVideo from '../../assets/images/w2e/videos/howdoyoudance.mp4';
+import blueVideo from '../../assets/images/w2e/videos/blue.mp4';
 
 // Import images for omanawanui hike
 import omanawanui1 from '../../assets/images/omanawanui/omanawanui1.jpg';
@@ -17,6 +25,8 @@ import omanawanui2 from '../../assets/images/omanawanui/omanawanui2.jpg';
 import omanawanui3 from '../../assets/images/omanawanui/omanawanui3.jpg';
 import omanawanui4 from '../../assets/images/omanawanui/omanawanui4.jpg';
 import omanawanui5 from '../../assets/images/omanawanui/omanawanui5.jpg';
+import omanavid1 from '../../assets/images/omanawanui/videos/omanavid1.mov';
+import omanavid2 from '../../assets/images/omanawanui/videos/omanavid2.mov';
 
 // Import images for nationals
 import nationals1 from '../../assets/images/2025nationals/nationals1.png';
@@ -74,7 +84,7 @@ export const Gallery = () => {
             className="mb-2 flex justify-center items-center cursor-pointer space-x-2 hover:text-blue-400 transition"
             onClick={() => toggleDropdown("Vietnam")}
           >
-            <p className="text-[18px]" style={{ color: 'var(--text-color)' }}>2025-2026 Vietnam Trip - 25/12/25 - 26/1/26</p>
+            <p className="text-[18px] font-medium" style={{ color: 'var(--text-color)' }}>2025-2026 Vietnam Trip - 25/12/25 - 26/1/26</p>
             {dropdowns.OmanawVietnamanui ? <IoChevronUp size={18} /> : <IoChevronDown size={18} />}
           </div>
           <div className={`overflow-hidden transition-all duration-500 ease-in-out ${dropdowns.Vietnam ? "max-h-[500px] mt-4 opacity-100" : "max-h-0 opacity-0"}`}>
@@ -87,7 +97,6 @@ export const Gallery = () => {
             <p className="text-lg flex justify-center mb-10" style={{ color: 'var(--text-color)' }}>Coming soon lel. :P</p>
           </div>
 
-
           {/* 2025 Section */}
           <p className="text-[25px] font-bold flex justify-center mb-1" style={{ color: 'var(--text-color)' }}>2025</p>
           {/* Omanawanui Dropdown */}
@@ -95,16 +104,46 @@ export const Gallery = () => {
             className="mb-2 flex justify-center items-center cursor-pointer space-x-2 hover:text-blue-400 transition"
             onClick={() => toggleDropdown("Omanawanui")}
           >
-            <p className="text-[18px]" style={{ color: 'var(--text-color)' }}>Ōmanawanui Track hike - 8/12/25</p>
+            <p className="text-[18px] font-medium" style={{ color: 'var(--text-color)' }}>Ōmanawanui Track hike - 8/12/25</p>
             {dropdowns.Omanawanui ? <IoChevronUp size={18} /> : <IoChevronDown size={18} />}
           </div>
-          <div className={`overflow-hidden transition-all duration-500 ease-in-out ${dropdowns.Omanawanui ? "max-h-[500px] mt-4 opacity-100" : "max-h-0 opacity-0"}`}>
+          <div className={`overflow-hidden transition-all duration-500 ease-in-out ${dropdowns.Omanawanui ? "max-h-[920px] mt-4 opacity-100" : "max-h-0 opacity-0"}`}>
             <ContinuousCarousel
               images={OmanawanuiPhotos} 
               speed={40}
               className="mb-2"
               onImageClick={setModalImg}
             />
+            <p className="text-xl font-medium flex justify-center gap-2">Videos <FaVideo/></p>
+            {/* Video Gallery */}
+            <div className="flex gap-4 py-2 px-2 overflow-x-auto md:overflow-x-visible justify-start md:justify-center scrollbar-hide">
+            <div className="flex flex-col items-center flex-shrink-0">
+              <video
+                src={omanavid1}
+                loop
+                playsInline
+                controls
+                preload="metadata"
+                className="w-48 h-64 md:w-60 md:h-80 object-cover rounded-lg"
+              />
+              <p className="text-sm mt-1 text-center" style={{ color: 'var(--text-color)' }}>
+                Summit view - before sunset
+              </p>
+            </div>
+            <div className="flex flex-col items-center flex-shrink-0">
+              <video
+                src={omanavid2}
+                loop
+                playsInline
+                controls
+                preload="metadata"
+                className="w-48 h-64 md:w-60 md:h-80 object-cover rounded-lg"
+              />
+              <p className="text-sm mt-1 text-center" style={{ color: 'var(--text-color)' }}>
+                Summit view - sunset
+              </p>
+            </div>
+          </div>
             <p className="text-lg flex justify-center mb-10" style={{ color: 'var(--text-color)' }}>Such a beautiful sunset hike. 🌅</p>
           </div>
 
@@ -113,17 +152,112 @@ export const Gallery = () => {
             className="mb-2 flex justify-center items-center cursor-pointer space-x-2 hover:text-blue-400 transition"
             onClick={() => toggleDropdown("W2E")}
           >
-            <p className="text-[18px]" style={{ color: 'var(--text-color)' }}>Wave to Earth concert ft Yung Kai - 7/12/25</p>
+            <p className="text-[18px] font-medium" style={{ color: 'var(--text-color)' }}>Wave to Earth concert ft Yung Kai - 7/12/25</p>
             {dropdowns.W2E ? <IoChevronUp size={18} /> : <IoChevronDown size={18} />}
           </div>
-          <div className={`overflow-hidden transition-all duration-500 ease-in-out ${dropdowns.W2E ? "max-h-[500px] mt-4 opacity-100" : "max-h-0 opacity-0"}`}>
+          <div className={`overflow-hidden transition-all duration-500 ease-in-out ${dropdowns.W2E ? "max-h-[9200px] mt-4 opacity-100" : "max-h-0 opacity-0"}`}>
             <ContinuousCarousel
               images={W2Ephotos}
               speed={40}
               className="mb-2"
               onImageClick={setModalImg}
             />
-            <p className="text-lg flex justify-center mb-10" style={{ color: 'var(--text-color)' }}>Got to see the amazing Daniel Kim!!! 😱</p>
+            <p className="text-xl font-medium flex justify-center gap-2">Videos <FaVideo/></p>
+            {/* Video Gallery */}
+            <div className="flex overflow-x-auto gap-2 py-2 px-2 scrollbar-hide">
+              <div className="flex flex-col items-center flex-shrink-0">
+                <video
+                  src={howdoyoudanceVideo}
+                  loop
+                  playsInline
+                  controls
+                  preload="metadata"
+                  className="w-48 h-64 md:w-60 md:h-80 object-cover rounded-lg"
+                />
+                <p className="text-sm mt-1 text-center" style={{ color: 'var(--text-color)' }}>
+                  how do you dance? - Yung Kai
+                </p>
+              </div>
+              <div className="flex flex-col items-center flex-shrink-0">
+                <video
+                  src={blueVideo}
+                  loop
+                  playsInline
+                  controls
+                  preload="metadata"
+                  className="w-48 h-64 md:w-60 md:h-80 object-cover rounded-lg"
+                />
+                <p className="text-sm mt-1 text-center" style={{ color: 'var(--text-color)' }}>
+                  blue - Yung Kai
+                </p>
+              </div>
+              <div className="flex flex-col items-center flex-shrink-0">
+                <video
+                  src={loveVideo}
+                  loop
+                  playsInline
+                  controls
+                  preload="metadata"
+                  className="w-48 h-64 md:w-60 md:h-80 object-cover rounded-lg"
+                />
+                <p className="text-sm mt-1 text-center" style={{ color: 'var(--text-color)' }}>
+                  사랑으로 (love.) - Wave to Earth
+                </p>
+              </div>
+              <div className="flex flex-col items-center flex-shrink-0">
+                <video
+                  src={badVideo}
+                  loop
+                  playsInline
+                  controls
+                  preload="metadata"
+                  className="w-48 h-64 md:w-60 md:h-80 object-cover rounded-lg"
+                />
+                <p className="text-sm mt-1 text-center" style={{ color: 'var(--text-color)' }}>
+                  bad - Wave to Earth
+                </p>
+              </div>
+              <div className="flex flex-col items-center flex-shrink-0">
+                <video
+                  src={annieVideo}
+                  loop
+                  playsInline
+                  controls
+                  preload="metadata"
+                  className="w-48 h-64 md:w-60 md:h-80 object-cover rounded-lg"
+                />
+                <p className="text-sm mt-1 text-center" style={{ color: 'var(--text-color)' }}>
+                  annie - Wave to Earth
+                </p>
+              </div>
+              <div className="flex flex-col items-center flex-shrink-0">
+                <video
+                  src={peacheyesVideo}
+                  loop
+                  playsInline
+                  controls
+                  preload="metadata"
+                  className="w-48 h-64 md:w-60 md:h-80 object-cover rounded-lg"
+                />
+                <p className="text-sm mt-1 text-center" style={{ color: 'var(--text-color)' }}>
+                  peach eyes - Wave to Earth
+                </p>
+              </div>
+              <div className="flex flex-col items-center flex-shrink-0">
+                <video
+                  src={seasonsVideo}
+                  loop
+                  playsInline
+                  controls
+                  preload="metadata"
+                  className="w-48 h-64 md:w-60 md:h-80 object-cover rounded-lg"
+                />
+                <p className="text-sm mt-1 text-center" style={{ color: 'var(--text-color)' }}>
+                  seasons - Wave to Earth
+                </p>
+              </div>
+            </div>
+            <p className="text-lg flex justify-center mb-10" style={{ color: 'var(--text-color)' }}>Got to see the amazing Daniel Kim!!! 😱🌊</p>
           </div>
 
           {/* Mercer Bay Loop + Comans Track Dropdown */}
@@ -131,7 +265,7 @@ export const Gallery = () => {
             className="mb-2 flex justify-center items-center cursor-pointer space-x-2 hover:text-blue-400 transition"
             onClick={() => toggleDropdown("MercerBay")}
           >
-            <p className="text-[18px]" style={{ color: 'var(--text-color)' }}>Mercer Bay Loop + Coman's Track hike - 22/11/25</p>
+            <p className="text-[18px] font-medium" style={{ color: 'var(--text-color)' }}>Mercer Bay Loop + Coman's Track hike - 22/11/25</p>
             {dropdowns.MercerBay ? <IoChevronUp size={18} /> : <IoChevronDown size={18} />}
           </div>
           <div className={`overflow-hidden transition-all duration-500 ease-in-out ${dropdowns.MercerBay ? "max-h-[500px] mt-4 opacity-100" : "max-h-0 opacity-0"}`}>
@@ -149,7 +283,7 @@ export const Gallery = () => {
             className="mb-2 flex justify-center items-center cursor-pointer space-x-2 hover:text-blue-400 transition"
             onClick={() => toggleDropdown("Nationals")}
           >
-            <p className="text-[18px]" style={{ color: 'var(--text-color)' }}>2025 NZPF Junior Nationals - 25/5/25</p>
+            <p className="text-[18px] font-medium" style={{ color: 'var(--text-color)' }}>2025 NZPF Junior Nationals - 25/5/25</p>
             {dropdowns.Nationals ? <IoChevronUp size={18} /> : <IoChevronDown size={18} />}
           </div>
           <div className={`overflow-hidden transition-all duration-500 ease-in-out ${dropdowns.Nationals ? "max-h-[500px] mt-4 opacity-100" : "max-h-0 opacity-0"}`}>
