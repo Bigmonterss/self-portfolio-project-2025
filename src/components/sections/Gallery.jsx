@@ -308,7 +308,7 @@ export const Gallery = () => {
                   </p>
                 </div>
               </div>
-              <p className="text-lg flex justify-center mb-10" style={{ color: 'var(--text-color)' }}>Got to see the amazing Daniel Kim!!! 😱🌊</p>
+              <p className="text-lg flex justify-center mb-10" style={{ color: 'var(--text-color)' }}>"I'll give you all my life, my seasons" 😭🌊</p>
             </div>
           </div>
 
