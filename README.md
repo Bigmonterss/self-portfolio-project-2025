@@ -1,12 +1,10 @@
-# React + Vite
+# Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my Personal Portfolio Website, built using modern web technologies.
+The website showcases my projects, skills, achievements, personal life, and experience. Built with a focus on responsive design, accessibility, and performance optimization to ensure a seamless user experience across all devices. The website includes animations, interactive features, and a dark/light mode theme toggle.
 
-Currently, two official plugins are available:
+Live Demo: https://bigmonterss.github.io/self-portfolio-project-2025/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
-
+## Technologies Used
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
