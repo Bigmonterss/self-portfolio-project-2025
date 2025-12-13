@@ -12,12 +12,22 @@ import w2eCrew1 from '../../assets/images/w2e/w2ecrew1.png';
 import w2eCrew2 from '../../assets/images/w2e/w2ecrew2.png';
 import yungKai1 from '../../assets/images/w2e/yungkai1.png';
 import loveVideo from '../../assets/images/w2e/videos/love.mp4';
+// Video imports
 import badVideo from '../../assets/images/w2e/videos/bad.mp4';
 import annieVideo from '../../assets/images/w2e/videos/annie.mp4';
 import peacheyesVideo from '../../assets/images/w2e/videos/peacheyes.mp4';
 import seasonsVideo from '../../assets/images/w2e/videos/seasons.mp4';
 import howdoyoudanceVideo from '../../assets/images/w2e/videos/howdoyoudance.mp4';
 import blueVideo from '../../assets/images/w2e/videos/blue.mp4';
+// Thumbnail imports
+import w2ethumb1 from '../../assets/images/w2e/thumbnails/w2ethumb1.png';
+import w2ethumb2 from '../../assets/images/w2e/thumbnails/w2ethumb2.png';
+import w2ethumb3 from '../../assets/images/w2e/thumbnails/w2ethumb3.png';
+import w2ethumb4 from '../../assets/images/w2e/thumbnails/w2ethumb4.png';
+import w2ethumb5 from '../../assets/images/w2e/thumbnails/w2ethumb5.png';
+import w2ethumb6 from '../../assets/images/w2e/thumbnails/w2ethumb6.png';
+import w2ethumb7 from '../../assets/images/w2e/thumbnails/w2ethumb7.png';
+
 
 // Import images for omanawanui hike
 import omanawanui1 from '../../assets/images/omanawanui/omanawanui1.jpg';
@@ -27,6 +37,9 @@ import omanawanui4 from '../../assets/images/omanawanui/omanawanui4.jpg';
 import omanawanui5 from '../../assets/images/omanawanui/omanawanui5.jpg';
 import omanavid1 from '../../assets/images/omanawanui/videos/omanavid1.mov';
 import omanavid2 from '../../assets/images/omanawanui/videos/omanavid2.mov';
+// Thumbnail imports
+import omanathumb1 from '../../assets/images/omanawanui/thumbnails/omanathumb1.png';
+import omanathumb2 from '../../assets/images/omanawanui/thumbnails/omanathumb2.png';
 
 // Import images for nationals
 import nationals1 from '../../assets/images/2025nationals/nationals1.png';
@@ -122,6 +135,7 @@ export const Gallery = () => {
                 src={omanavid1}
                 loop
                 playsInline
+                poster={omanathumb2}
                 controls
                 preload="metadata"
                 className="w-48 h-64 md:w-60 md:h-80 object-cover rounded-lg"
@@ -135,6 +149,7 @@ export const Gallery = () => {
                 src={omanavid2}
                 loop
                 playsInline
+                poster={omanathumb1}
                 controls
                 preload="metadata"
                 className="w-48 h-64 md:w-60 md:h-80 object-cover rounded-lg"
@@ -170,6 +185,7 @@ export const Gallery = () => {
                   src={howdoyoudanceVideo}
                   loop
                   playsInline
+                  poster={w2ethumb4}
                   controls
                   preload="metadata"
                   className="w-48 h-64 md:w-60 md:h-80 object-cover rounded-lg"
@@ -183,6 +199,7 @@ export const Gallery = () => {
                   src={blueVideo}
                   loop
                   playsInline
+                  poster={w2ethumb3}
                   controls
                   preload="metadata"
                   className="w-48 h-64 md:w-60 md:h-80 object-cover rounded-lg"
@@ -196,6 +213,7 @@ export const Gallery = () => {
                   src={loveVideo}
                   loop
                   playsInline
+                  poster={w2ethumb5}
                   controls
                   preload="metadata"
                   className="w-48 h-64 md:w-60 md:h-80 object-cover rounded-lg"
@@ -209,6 +227,7 @@ export const Gallery = () => {
                   src={badVideo}
                   loop
                   playsInline
+                  poster={w2ethumb2}
                   controls
                   preload="metadata"
                   className="w-48 h-64 md:w-60 md:h-80 object-cover rounded-lg"
@@ -222,6 +241,7 @@ export const Gallery = () => {
                   src={annieVideo}
                   loop
                   playsInline
+                  poster={w2ethumb1}
                   controls
                   preload="metadata"
                   className="w-48 h-64 md:w-60 md:h-80 object-cover rounded-lg"
@@ -235,6 +255,7 @@ export const Gallery = () => {
                   src={peacheyesVideo}
                   loop
                   playsInline
+                  poster={w2ethumb6}
                   controls
                   preload="metadata"
                   className="w-48 h-64 md:w-60 md:h-80 object-cover rounded-lg"
@@ -248,6 +269,7 @@ export const Gallery = () => {
                   src={seasonsVideo}
                   loop
                   playsInline
+                  poster={w2ethumb7}
                   controls
                   preload="metadata"
                   className="w-48 h-64 md:w-60 md:h-80 object-cover rounded-lg"
