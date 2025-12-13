@@ -24,10 +24,18 @@ import bearlingoImage6 from '../assets/images/bearlingo/6.png';
 import bearlingoImage7 from '../assets/images/bearlingo/7.png';
 import bearlingoImage8 from '../assets/images/bearlingo/8.png';
 
+// Porfolio image arrays
+import portfolioImage1 from '../assets/images/portfolio/portfolio1.png';
+import portfolioImage2 from '../assets/images/portfolio/portfolio2.png';
+import portfolioImage3 from '../assets/images/portfolio/portfolio3.png';
+import portfolioImage4 from '../assets/images/portfolio/portfolio4.png';
+import portfolioImage5 from '../assets/images/portfolio/portfolio5.png';
+
 const podcastImages = [podcastImage1, podcastImage2, podcastImage3];
 const prototypeImages = [landingPage, registerPage];
 const concertImages = [concertImage1, concertImage2, concertImage3];
 const bearlingoImages = [bearlingoImage1, bearlingoImage2, bearlingoImage3, bearlingoImage4, bearlingoImage5, bearlingoImage6, bearlingoImage7, bearlingoImage8]
+const portfolioImages = [portfolioImage1, portfolioImage2, portfolioImage3, portfolioImage4, portfolioImage5];
 
 export const ImageCarousel = ({ images, autoplay = true, autoplaySpeed = 3500 }) => {
     const [currentImage, setCurrentImage] = useState(0);
@@ -82,4 +90,4 @@ export const ImageCarousel = ({ images, autoplay = true, autoplaySpeed = 3500 })
 };
 
 // Export images too, if you want to import them from here
-export { podcastImages, prototypeImages, concertImages, bearlingoImages };
+export { podcastImages, prototypeImages, concertImages, bearlingoImages, portfolioImages };

@@ -1,5 +1,5 @@
 import { RevealOnScroll } from "../RevealOnScroll";
-import { ImageCarousel, podcastImages, prototypeImages, concertImages, bearlingoImages } from '../ProjectImageCarousel';
+import { ImageCarousel, podcastImages, prototypeImages, concertImages, bearlingoImages, portfolioImages } from '../ProjectImageCarousel';
 import { useState, useEffect } from 'react';
 import { FaLongArrowAltLeft, FaLongArrowAltRight } from 'react-icons/fa';
 
@@ -8,7 +8,8 @@ export const Projects = () => {
         { title: 'Podcast Library', desc: 'A full-stack group project where we had to create a podcast library web app where you are able to add, remove and browse for podcasts. It features a user authentication system, as well as using a database to store all podcasts, ratings, playlists, and login credentials.', tech: ['Python','Flask','HTML','CSS','Git'], images: podcastImages, link: 'https://github.com/Bigmonterss/2024-podcast-library-groupproject' },
         { title: 'Concert Booking', desc: 'Given a fully styled frontend and other relevant code, our backend work focused on implementing a RESTful web service for browsing concerts, checking seat availability, and making secure reservations with authentication and real-time sell-out alerts.', tech: ['Java','SQL','XML'], images: concertImages, link: '#' },
         { title: 'High-Fidelity Prototype', desc: 'High-fidelity prototype of a pet-sitting service website featuring a landing page and user registration form. Focused on visual design, accessibility, and brand colour consistency. Based on Gestalt principles, semantic structure, and user-friendly form elements.', tech: ['UX/UI','Figma'], images: prototypeImages, link: 'https://www.figma.com' },
-        { title: 'Capstone - BearLingo', desc: 'An AI cross-platform job-seeking and career progression/learning application inspired by Duolingo. With a modular, component-based design, and integrating authentication and real-time database features. Delivering biweekly progress updates and live demos to the client.', tech: ['Flutter','Dart','Firebase','OpenAI','Git'], images: bearlingoImages, link: 'https://github.com/uoa-compsci399-s2-2025/capstone-project-s2-2025-team-14.git' }
+        { title: 'Capstone - BearLingo', desc: 'An AI cross-platform job-seeking and career progression/learning application inspired by Duolingo. With a modular, component-based design, and integrating authentication and real-time database features. Delivering biweekly progress updates and live demos to the client.', tech: ['Flutter','Dart','Firebase','OpenAI','Git'], images: bearlingoImages, link: 'https://github.com/uoa-compsci399-s2-2025/capstone-project-s2-2025-team-14.git' },
+        { title: 'Portfolio Website', desc: 'A personal portfolio website to showcase my projects, skills, life, and experience. Built with a focus on responsive design, accessibility, and performance optimization to ensure a seamless user experience across all devices.', tech: ['React','Tailwind CSS','JavaScript'], images: portfolioImages, link: 'https://github.com/Bigmonterss/self-portfolio-project-2025.git'}
     ];
 
     const [index, setIndex] = useState(0);
