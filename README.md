@@ -82,6 +82,6 @@ npm run deploy
 
 ## 👍 Acknoledgements
 - Inspired by other similar modern portfolio projects.
-- Inspired by a tutorial made by PedroTech | https://www.youtube.com/watch?v=LGdPMf-SgBA&t
+- Inspired by a tutorial made by PedroTech | [PedroTech Portfolio Tutorial Video](https://www.youtube.com/watch?v=LGdPMf-SgBA&t)
 - Assistance from Co-pilot for documentation and visual effects.
-- Icons from https://react-icons.github.io/react-icons/
+- Icons from [React Icons](https://react-icons.github.io/react-icons/)
